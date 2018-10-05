@@ -107,6 +107,7 @@ class ProyectoController extends Controller
             'idModalidad'=>$request['idModalidad'],
             //'estadoProyecto'=>$request['estadoProyecto'],
             'fechaRegistroProy'=>$mytime,
+            'institucion' =>$request['institucion'],
 
             //area
             //estudiante1

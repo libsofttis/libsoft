@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-05-2018 a las 02:21:47
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.6.15
+-- Tiempo de generación: 05-10-2018 a las 20:49:08
+-- Versión del servidor: 10.1.13-MariaDB
+-- Versión de PHP: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -419,8 +419,8 @@ INSERT INTO `asignacion` (`idAsig`, `rol`, `idProyecto`, `idDoc`, `estado`) VALU
 (9, 'tutor', 9, 9, 'Terminado'),
 (10, 'tutor', 10, 10, 'Terminado'),
 (11, 'tutor', 11, 1, 'Terminado'),
-(12, 'tutor', 12, 2, 'Activo'),
-(13, 'tutor', 13, 3, 'Activo'),
+(12, 'tutor', 12, 2, 'Terminado'),
+(13, 'tutor', 13, 3, 'Terminado'),
 (14, 'tribunal', 1, 4, 'Terminado'),
 (15, 'tribunal', 2, 5, 'Terminado'),
 (16, 'tribunal', 3, 6, 'Terminado'),
@@ -432,8 +432,8 @@ INSERT INTO `asignacion` (`idAsig`, `rol`, `idProyecto`, `idDoc`, `estado`) VALU
 (22, 'tribunal', 9, 22, 'Terminado'),
 (23, 'tribunal', 10, 23, 'Terminado'),
 (24, 'tribunal', 11, 24, 'Terminado'),
-(25, 'tribunal', 12, 25, 'Activo'),
-(26, 'tribunal', 13, 26, 'Activo'),
+(25, 'tribunal', 12, 25, 'Terminado'),
+(26, 'tribunal', 13, 26, 'Terminado'),
 (27, 'tribunal', 1, 27, 'Terminado'),
 (28, 'tribunal', 2, 28, 'Terminado'),
 (29, 'tribunal', 3, 29, 'Terminado'),
@@ -445,8 +445,8 @@ INSERT INTO `asignacion` (`idAsig`, `rol`, `idProyecto`, `idDoc`, `estado`) VALU
 (35, 'tribunal', 9, 35, 'Terminado'),
 (36, 'tribunal', 10, 36, 'Terminado'),
 (37, 'tribunal', 11, 37, 'Terminado'),
-(38, 'tribunal', 12, 38, 'Activo'),
-(39, 'tribunal', 13, 39, 'Activo'),
+(38, 'tribunal', 12, 38, 'Terminado'),
+(39, 'tribunal', 13, 39, 'Terminado'),
 (40, 'tribunal', 1, 40, 'Terminado'),
 (41, 'tribunal', 2, 41, 'Terminado'),
 (42, 'tribunal', 3, 80, 'Terminado'),
@@ -458,8 +458,10 @@ INSERT INTO `asignacion` (`idAsig`, `rol`, `idProyecto`, `idDoc`, `estado`) VALU
 (48, 'tribunal', 9, 86, 'Terminado'),
 (49, 'tribunal', 10, 87, 'Terminado'),
 (50, 'tribunal', 11, 88, 'Terminado'),
-(51, 'tribunal', 12, 89, 'Activo'),
-(52, 'tribunal', 13, 90, 'Activo');
+(51, 'tribunal', 12, 89, 'Terminado'),
+(52, 'tribunal', 13, 90, 'Terminado'),
+(53, 'tutor', 18, 3, 'Terminado'),
+(54, 'tutor', 18, 8, 'Terminado');
 
 -- --------------------------------------------------------
 
@@ -469,17 +471,26 @@ INSERT INTO `asignacion` (`idAsig`, `rol`, `idProyecto`, `idDoc`, `estado`) VALU
 
 CREATE TABLE `carrera` (
   `idCarrera` int(11) NOT NULL,
-  `nombreCarrera` varchar(60) NOT NULL
+  `nombreCarrera` varchar(60) NOT NULL,
+  `facultad` enum('FAC. CIENCIAS AGRICOLAS Y AGROPECUARIAS','FAC. CS.FARMACEUTICAS Y BIOQUIMICAS','FAC. CIENCIAS ECONOMICAS','FAC. DESARROLLO RURAL','FAC. ODONTOLOGIA','FAC.MEDICINA','FAC. ARQUITECTURA Y CIENCIAS DEL HABITAD','FAC. HUMANIDADES Y CS. DE EDUCACION','FAC. CIENCIAS JURIDICAS Y POLITIC','FAC. CIENCIAS Y TECNOLOGIA','FAC. POLITECNICA DEL VALLE ALTO','FAC. CIENCIAS SOCIALES','FAC. CIENCIAS VETERINARIAS') DEFAULT NULL,
+  `codigoCarrera` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `carrera`
 --
 
-INSERT INTO `carrera` (`idCarrera`, `nombreCarrera`) VALUES
-(1, 'Ingenieria Informatica'),
-(2, 'Ingenieria de Sistemas'),
-(3, 'Otros');
+INSERT INTO `carrera` (`idCarrera`, `nombreCarrera`, `facultad`, `codigoCarrera`) VALUES
+(1, 'Ingenieria Informatica', 'FAC. CIENCIAS Y TECNOLOGIA', '134111'),
+(2, 'Ingenieria de Sistemas', 'FAC. CIENCIAS Y TECNOLOGIA', '411702'),
+(3, 'Otros', NULL, NULL),
+(7, '  Ing. Industrial', 'FAC. CIENCIAS Y TECNOLOGIA', '    309801'),
+(8, ' Ing. Electronica', 'FAC. CIENCIAS Y TECNOLOGIA', '  429701'),
+(9, ' Lic. Odontologia', 'FAC. ODONTOLOGIA', '  179901'),
+(10, ' Lic. Bioquimica y Farmacia', 'FAC. CS.FARMACEUTICAS Y BIOQUIMICAS', '  049001'),
+(11, ' Lic. Linguistica', 'FAC. HUMANIDADES Y CS. DE EDUCACION', '269301'),
+(12, ' Lic. Comunicacion Social', 'FAC. HUMANIDADES Y CS. DE EDUCACION', '  140502'),
+(13, ' Lic. Veterinaria', 'FAC. CIENCIAS VETERINARIAS', '  039503');
 
 -- --------------------------------------------------------
 
@@ -627,13 +638,14 @@ INSERT INTO `estudiante` (`idEstudiante`, `ciEst`, `nombreEst`, `apellidoEst`, `
 (8, '9108625', 'Jeaneth ', 'Galarza Alcocer ', 'j.galarza2906@gmail.com ', '62589456', 2),
 (9, '2668719', 'Ivan Saul ', 'Cartagena Vega ', 'ivancartagenavega@hotmail.com ', '65248541', 1),
 (10, '3892031', 'Diego Alexander  ', 'Garcia Cuchallo ', 'qtimpot@gmail.com  ', '75289654', 1),
-(11, '4510908', 'Saul ', 'Jaimes Morales ', 'carnival_tauro@hotmail.com ', '4528136', 1),
+(11, '4510908', 'Saul ', 'Jaimes Morales ', 'carnival_tauro@hotmail.com', '4528136', 1),
 (12, '1054008', 'Jhosmar ', 'Parra Montaño ', 'nogayo.jpm@gmail.com ', '4525985', 2),
 (13, '2764888', 'Pedro Manuel ', 'Aneyba Fernandez Davila ', 'pedro.aneyba@gmail.com ', '4871253', 2),
 (14, '3865031', 'Alex Fernando ', 'Gutierrez ', 'alexg@gmail.com  ', '75289654', 1),
 (15, '4559908', 'Simon Roger ', 'Fernandez Rojas ', 'No Disponible ', '78945214', 1),
 (16, '1896008', 'Jhoel ', 'Robles Rojas ', 'No Disponible ', '63521489', 2),
-(17, '2564888', 'Camilo  ', 'Andrade Perez ', 'No Disponible ', '69587423', 2);
+(17, '2564888', 'Camilo  ', 'Andrade Perez ', 'No Disponible ', '69587423', 2),
+(18, '5432122', 'Jhonatan ', 'Heredia', 'jhonatanH@hotmail.com', '44365711', 2);
 
 -- --------------------------------------------------------
 
@@ -782,31 +794,33 @@ CREATE TABLE `proyecto` (
   `periodo` varchar(30) NOT NULL,
   `sesionDeConsejo` varchar(45) DEFAULT NULL,
   `idModalidad` int(2) NOT NULL,
-  `fechaRegistroProy` date DEFAULT NULL
+  `fechaRegistroProy` date DEFAULT NULL,
+  `institucion` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `proyecto`
 --
 
-INSERT INTO `proyecto` (`idProyecto`, `titulo`, `objetivos`, `descripcion`, `fechaIni`, `fechaFin`, `periodo`, `sesionDeConsejo`, `idModalidad`, `fechaRegistroProy`) VALUES
-(1, 'SISTEMA GESTIÓN DEL CONOCIMIENTO PARA EMPRESAS DE DESARROLLO DE SOFTWARE ', 'Facilitar la recopilación y propagación del conocimiento para la capitalización de experiencias y conocimiento interno en una empresa de Desarrollo de Software a través de un sistema gestión del conocimiento. ', 'Por lo general las empresas de cualquier índole buscan: responder al cambio, innovar, mejorar sus productos y la satisfacción del personal; Lo cual conlleva a la necesidad de disponer de un portal corporativo interna que permita la comunicación. ', '2017-05-17', '2017-10-14', '2', 'Sesion-021', 2, '2017-05-16'),
-(2, 'APLICACIÓN MÓVIL PARA TRAMITES EN COCHABAMBA ', 'Desarrollar una aplicación para dispositivos móviles plataforma Android para la realización de trámites en la ciudad de Cochabamba. ', 'El presente proyecto de grado pretende realizar una aplicación móvil que sirva de guía a toda población de Cochabamba para la realización de trámites de diferentes tipos, otorgando información suficiente sobre los requerimientos que se necesita. ', '2017-06-12', '2018-01-22', '1', 'Sesion-041', 2, '2017-06-11'),
-(3, 'CAPA DE VISTA PARA EL SISTEMA ERP-BOA ', 'Facilitar el uso para los proveedores mediante una nueva capa de vista para el sistema ERP-BOA ', 'La empresa Boliviana de Aviacion ha desarrollado un sistema con Frameworks PXP para el control de compra, almacenamiento y destino de insumos para la empresa. Sin embargo, este sistema no es intuitivo y resulta difícil de usar para los proveedores. ', '2017-03-23', '2017-10-13', '2', 'Sesion-041', 1, '2017-03-22'),
-(4, 'LAS REDES NEURONALES CONVOLUCIONALES EN EL ANÁLISIS DE SENTIMIENTOS DE LAS OPINIONES DE ATRACTIVOS TURÍSTICOS DE BOLIVIA ', 'Evaluar el grado de acierto de las redes neuronales convolucionales en la clasificación de opiniones escritas en lenguaje natural. ', 'En esta tesis se pretende comprobar que las RNC dedicadas a análisis de sentimientos obtienen\r\nbuenos resultados. Las RNC son una técnica relativamente nueva en las áreas del procesamiento de lenguaje natural. ', '2017-08-30', '2018-02-11', '1', 'Sesion-051', 4, '2017-08-29'),
-(5, 'APLICACIÓN DE CONTROL Y SEGUIMIENTO DEL CARNET DE SALUD INFANTIL EN DISPOSITIVOS ANDROID ', 'Desarrollo de una Aplicación de control y seguimiento del Carnet de Salud Infantil en Dispositivos Android. ', 'La aplicación a desarrollar permite el acceso a la información detallada del estado en cual se encuentra el niño/a desde un dispositivo móvil, esto reducirá el riesgo de perdida del Carnet de Salud Infantil el cual es un documento muy valioso. ', '2017-04-05', '2017-11-15', '2', 'Sesion-052', 2, '2017-04-04'),
-(6, 'SISTEMA PARA ADMINISTRACIÓN DE SERVICIO TÉCNICO Y OPTIMIZACIÓN EN ATENCIÓN AL CLIENTE ', 'Facilitar a las empresas de mantenimiento y reparación de equipos, a través del desarrollo de una plataforma web, donde podrán administrar correctamente los procesos y además brindar la posibilidad de que los clientes accedan al sistema. ', 'Con la llegada de la tecnología a nuestro país, se puede observar tanto las personas y las empresas utilizan aparatos electrónicos y mecánicos con distintas fines ya sea para información y comunicación, trasladarse de un lugar a otro, etc.  ', '2017-01-06', '2017-09-16', '2', 'Sesion-063', 2, '2017-01-05'),
-(7, 'UN ENFOQUE DE SOLUCIÓN A MODELOS DE DISTRIBUCIÓN SOBRE REDES DINÁMICAS. ', 'Diseñar un método, tal que dado un modelo de un objeto que circula sobre una red con un punto de inicio y un punto de fin, reciba solicitudes en tiempo real que requieran que el objeto llegue a un punto dentro de la red, minimizando el tiempo total. ', 'Dado un objeto que está circulando sobre una red (con un punto de inicio y fin predeterminado) y solicitudes en tiempo real que requieran que este objeto pase por un punto que pertenezca a la red. ', '2018-01-16', '2018-04-06', '1', 'Sesion-065', 4, '2018-01-15'),
-(8, 'SISTEMA DE CONTABILIDAD WEB PARA PEQUEÑAS Y MEDIANAS EMPRESAS ', 'Implementar un Sistema Web de Gestión Contable para pequeñas y medianas empresas de Bolivia siguiendo las reglas de la normativa nacional. ', 'El problema de las personas al momento de emprender una pequeña o media empresa es\r\nla de administrar contablemente su negocio y para ello necesitan de conocimientos en contabilidad o\r\nprofesionales del área para la elaboración de los Estados Financieros.   ', '2018-02-23', '2018-04-13', '1', 'Sesion-082', 2, '2018-02-22'),
-(9, 'RECONOCIMIENTO DE PATRONES EN EL MANEJO DE UN CONDUCTOR ', 'Desarrollar un mecanismo de reconocimiento de patrones de conducción mediante el uso de un dispositivo móvil y algoritmos de aprendizaje automático, para alertar de manera oportuna el hallazgo de un patrón anómalo en el manejo de un conductor. ', 'El presente trabajo plantea qué, con la captura de parámetros de manejo de un conductor mediante el uso de un dispositivo móvil, es posible encontrar patrones de conducción que describan diferentes comportamientos de manejo. ', '2018-02-13', '2018-04-23', '1', 'Sesion-021', 2, '2018-02-12'),
-(10, 'DESARROLLO MÓDULOS SISTEMA DE GESTIÓN Y COMPETENCIA DEPORTIVA COCHABAMBA 2018 ', 'Desarrollar parte de la Herramienta que coadyuve con la organización de los juegos Cocha 2018  ', 'El sistema forma parte del Sistema que coadyuvara en los juegos Cocha 2018 que espera la visita de ms de 4000 atletas. Los módulos están descritos en los objetivos específicos y son un gran aporte a esta institución.  ', '2017-04-19', NULL, '1', 'Sesion-091', 1, '2017-04-18'),
-(11, 'PLATAFORMA ONLINE PARA CURSOS MASIVOS Y ABIERTOS. ', 'Desarrollar una plataforma que de soporte MOOC. ', 'La plataforma MOOC es un sistema que soporta cursos online, su finalidad es alojar a cursos del tipo MOOC, estos tipos de portales promueven los cursos abiertos, de participación masiva y sin restricciones. ', '2017-03-23', NULL, '2', 'Sesion-093', 2, '2017-03-22'),
-(12, 'RED SOCIAL PARA EL CONTROL DISCIPLINARIO E INFORMATIVO DE ESTUDIANTES DE NIVEL PRIMARIO. ', 'Mejorar el control disciplinario e informativo de los estudiantes mediante una aplicación móvil basada en notificaciones para permitir mayor comunicación entre la unidad educativa, el responsable académico y los padres de familia de los estudiantes. ', 'La aplicación permitirá realizar un control administrativo e informativo sobre el cumplimiento de las normas disciplinarias de los estudiantes en las instituciones educativas, mediante una aplicación móvil que permita mayor comunicación. ', '2017-01-27', NULL, '1', 'Sesion-095', 2, '2017-01-26'),
-(13, 'APLICACIÓN MÓVIL PARA EL APOYO DE APRENDIZAJE DE LAS MATEMÁTICAS EN NIÑOS QUE PRESENTAN DISCALCULIA ', 'Desarrollar una Aplicación móvil para la Enseñanza de las Matemáticas en Niños. ', 'La discalculia es un problema psicopedagógico que dificulta el aprendizaje de las matemáticas, el uso de los Smartphone, tablets va en aumento considerablemente. Con este proyecto se pretende apalear este problema en niños discalculicos en edad escola. ', '2017-03-21', NULL, '2', 'Sesion-098', 2, '2017-03-20'),
-(14, 'APLICACION DE MODELOS MATEMATICOS ', 'Desarrollar una herramienta de desarrollo d emodelos matematicos para la aplciacion a la navegacion aerea ', 'El sistema forma parte del Sistema de gestion de modelos de simulacion  ', NULL, NULL, '1', NULL, 1, NULL),
-(15, 'APLICACION DE PLATAFORMAS PARA LA GESTION DE INVENTARIOS ', 'Desarrollar una plataforma que de soporte MOOC. ', 'La plataforma MOOC es un sistema que soporta cursos online, su finalidad es alojar a cursos del tipo MOOC, estos tipos de portales promueven los cursos abiertos, de participación masiva y sin restricciones. ', NULL, NULL, '2', NULL, 2, NULL),
-(16, 'APLICACION WEB PARA EL MANEJO DE INFORMACION DE ESTUDIANTES ', 'Mejorar el control disciplinario e informativo de los estudiantes mediante una aplicación móvil basada en notificaciones para permitir mayor comunicación entre la unidad educativa, el responsable académico y los padres de familia de los estudiantes. ', 'La aplicación permitirá realizar un control administrativo e informativo sobre el cumplimiento de las normas disciplinarias de los estudiantes en las instituciones educativas, mediante una aplicación móvil que permita mayor comunicación. ', NULL, NULL, '1', NULL, 2, NULL),
-(17, 'APLICACION PARA LA GESTION DE VENTA DE APARATOS ELECTRONICOS ', 'Desarrollar una Aplicación móvil para la gestion de venta de aparatos electronicos ', 'El sistema permitira la gestion de venta de aparatos electronicos para las organizaciones gremiales que comercializan dispositivos eletronicos ', NULL, NULL, '2', NULL, 2, NULL);
+INSERT INTO `proyecto` (`idProyecto`, `titulo`, `objetivos`, `descripcion`, `fechaIni`, `fechaFin`, `periodo`, `sesionDeConsejo`, `idModalidad`, `fechaRegistroProy`, `institucion`) VALUES
+(1, 'SISTEMA GESTIÓN DEL CONOCIMIENTO PARA EMPRESAS DE DESARROLLO DE SOFTWARE ', 'Facilitar la recopilación y propagación del conocimiento para la capitalización de experiencias y conocimiento interno en una empresa de Desarrollo de Software a través de un sistema gestión del conocimiento. ', 'Por lo general las empresas de cualquier índole buscan: responder al cambio, innovar, mejorar sus productos y la satisfacción del personal; Lo cual conlleva a la necesidad de disponer de un portal corporativo interna que permita la comunicación. ', '2017-05-17', '2017-10-14', '2', 'Sesion-021', 2, '2017-05-16', NULL),
+(2, 'APLICACIÓN MÓVIL PARA TRAMITES EN COCHABAMBA ', 'Desarrollar una aplicación para dispositivos móviles plataforma Android para la realización de trámites en la ciudad de Cochabamba. ', 'El presente proyecto de grado pretende realizar una aplicación móvil que sirva de guía a toda población de Cochabamba para la realización de trámites de diferentes tipos, otorgando información suficiente sobre los requerimientos que se necesita. ', '2017-06-12', '2018-01-22', '1', 'Sesion-041', 2, '2017-06-11', NULL),
+(3, 'CAPA DE VISTA PARA EL SISTEMA ERP-BOA ', 'Facilitar el uso para los proveedores mediante una nueva capa de vista para el sistema ERP-BOA ', 'La empresa Boliviana de Aviacion ha desarrollado un sistema con Frameworks PXP para el control de compra, almacenamiento y destino de insumos para la empresa. Sin embargo, este sistema no es intuitivo y resulta difícil de usar para los proveedores. ', '2017-03-23', '2017-10-13', '2', 'Sesion-041', 1, '2017-03-22', NULL),
+(4, 'LAS REDES NEURONALES CONVOLUCIONALES EN EL ANÁLISIS DE SENTIMIENTOS DE LAS OPINIONES DE ATRACTIVOS TURÍSTICOS DE BOLIVIA ', 'Evaluar el grado de acierto de las redes neuronales convolucionales en la clasificación de opiniones escritas en lenguaje natural. ', 'En esta tesis se pretende comprobar que las RNC dedicadas a análisis de sentimientos obtienen\r\nbuenos resultados. Las RNC son una técnica relativamente nueva en las áreas del procesamiento de lenguaje natural. ', '2017-08-30', '2018-02-11', '1', 'Sesion-051', 4, '2017-08-29', NULL),
+(5, 'APLICACIÓN DE CONTROL Y SEGUIMIENTO DEL CARNET DE SALUD INFANTIL EN DISPOSITIVOS ANDROID ', 'Desarrollo de una Aplicación de control y seguimiento del Carnet de Salud Infantil en Dispositivos Android. ', 'La aplicación a desarrollar permite el acceso a la información detallada del estado en cual se encuentra el niño/a desde un dispositivo móvil, esto reducirá el riesgo de perdida del Carnet de Salud Infantil el cual es un documento muy valioso. ', '2017-04-05', '2017-11-15', '2', 'Sesion-052', 2, '2017-04-04', NULL),
+(6, 'SISTEMA PARA ADMINISTRACIÓN DE SERVICIO TÉCNICO Y OPTIMIZACIÓN EN ATENCIÓN AL CLIENTE ', 'Facilitar a las empresas de mantenimiento y reparación de equipos, a través del desarrollo de una plataforma web, donde podrán administrar correctamente los procesos y además brindar la posibilidad de que los clientes accedan al sistema. ', 'Con la llegada de la tecnología a nuestro país, se puede observar tanto las personas y las empresas utilizan aparatos electrónicos y mecánicos con distintas fines ya sea para información y comunicación, trasladarse de un lugar a otro, etc.  ', '2017-01-06', '2017-09-16', '2', 'Sesion-063', 2, '2017-01-05', NULL),
+(7, 'UN ENFOQUE DE SOLUCIÓN A MODELOS DE DISTRIBUCIÓN SOBRE REDES DINÁMICAS. ', 'Diseñar un método, tal que dado un modelo de un objeto que circula sobre una red con un punto de inicio y un punto de fin, reciba solicitudes en tiempo real que requieran que el objeto llegue a un punto dentro de la red, minimizando el tiempo total. ', 'Dado un objeto que está circulando sobre una red (con un punto de inicio y fin predeterminado) y solicitudes en tiempo real que requieran que este objeto pase por un punto que pertenezca a la red. ', '2018-01-16', '2018-04-06', '1', 'Sesion-065', 4, '2018-01-15', NULL),
+(8, 'SISTEMA DE CONTABILIDAD WEB PARA PEQUEÑAS Y MEDIANAS EMPRESAS ', 'Implementar un Sistema Web de Gestión Contable para pequeñas y medianas empresas de Bolivia siguiendo las reglas de la normativa nacional. ', 'El problema de las personas al momento de emprender una pequeña o media empresa es\r\nla de administrar contablemente su negocio y para ello necesitan de conocimientos en contabilidad o\r\nprofesionales del área para la elaboración de los Estados Financieros.   ', '2018-02-23', '2018-04-13', '1', 'Sesion-082', 2, '2018-02-22', NULL),
+(9, 'RECONOCIMIENTO DE PATRONES EN EL MANEJO DE UN CONDUCTOR ', 'Desarrollar un mecanismo de reconocimiento de patrones de conducción mediante el uso de un dispositivo móvil y algoritmos de aprendizaje automático, para alertar de manera oportuna el hallazgo de un patrón anómalo en el manejo de un conductor. ', 'El presente trabajo plantea qué, con la captura de parámetros de manejo de un conductor mediante el uso de un dispositivo móvil, es posible encontrar patrones de conducción que describan diferentes comportamientos de manejo. ', '2018-02-13', '2018-04-23', '1', 'Sesion-021', 2, '2018-02-12', NULL),
+(10, 'DESARROLLO MÓDULOS SISTEMA DE GESTIÓN Y COMPETENCIA DEPORTIVA COCHABAMBA 2018 ', 'Desarrollar parte de la Herramienta que coadyuve con la organización de los juegos Cocha 2018  ', 'El sistema forma parte del Sistema que coadyuvara en los juegos Cocha 2018 que espera la visita de ms de 4000 atletas. Los módulos están descritos en los objetivos específicos y son un gran aporte a esta institución.  ', '2017-04-19', NULL, '1', 'Sesion-091', 1, '2017-04-18', NULL),
+(11, 'PLATAFORMA ONLINE PARA CURSOS MASIVOS Y ABIERTOS. ', 'Desarrollar una plataforma que de soporte MOOC. ', 'La plataforma MOOC es un sistema que soporta cursos online, su finalidad es alojar a cursos del tipo MOOC, estos tipos de portales promueven los cursos abiertos, de participación masiva y sin restricciones. ', '2017-03-23', NULL, '2', 'Sesion-093', 2, '2017-03-22', NULL),
+(12, 'RED SOCIAL PARA EL CONTROL DISCIPLINARIO E INFORMATIVO DE ESTUDIANTES DE NIVEL PRIMARIO. ', 'Mejorar el control disciplinario e informativo de los estudiantes mediante una aplicación móvil basada en notificaciones para permitir mayor comunicación entre la unidad educativa, el responsable académico y los padres de familia de los estudiantes. ', 'La aplicación permitirá realizar un control administrativo e informativo sobre el cumplimiento de las normas disciplinarias de los estudiantes en las instituciones educativas, mediante una aplicación móvil que permita mayor comunicación. ', '2017-01-27', NULL, '1', 'Sesion-095', 2, '2017-01-26', NULL),
+(13, 'APLICACIÓN MÓVIL PARA EL APOYO DE APRENDIZAJE DE LAS MATEMÁTICAS EN NIÑOS QUE PRESENTAN DISCALCULIA ', 'Desarrollar una Aplicación móvil para la Enseñanza de las Matemáticas en Niños. ', 'La discalculia es un problema psicopedagógico que dificulta el aprendizaje de las matemáticas, el uso de los Smartphone, tablets va en aumento considerablemente. Con este proyecto se pretende apalear este problema en niños discalculicos en edad escola. ', '2017-03-21', NULL, '2', 'Sesion-098', 2, '2017-03-20', NULL),
+(14, 'APLICACION DE MODELOS MATEMATICOS ', 'Desarrollar una herramienta de desarrollo d emodelos matematicos para la aplciacion a la navegacion aerea ', 'El sistema forma parte del Sistema de gestion de modelos de simulacion  ', NULL, NULL, '1', NULL, 1, NULL, NULL),
+(15, 'APLICACION DE PLATAFORMAS PARA LA GESTION DE INVENTARIOS ', 'Desarrollar una plataforma que de soporte MOOC. ', 'La plataforma MOOC es un sistema que soporta cursos online, su finalidad es alojar a cursos del tipo MOOC, estos tipos de portales promueven los cursos abiertos, de participación masiva y sin restricciones. ', NULL, NULL, '2', NULL, 2, NULL, NULL),
+(16, 'APLICACION WEB PARA EL MANEJO DE INFORMACION DE ESTUDIANTES ', 'Mejorar el control disciplinario e informativo de los estudiantes mediante una aplicación móvil basada en notificaciones para permitir mayor comunicación entre la unidad educativa, el responsable académico y los padres de familia de los estudiantes. ', 'La aplicación permitirá realizar un control administrativo e informativo sobre el cumplimiento de las normas disciplinarias de los estudiantes en las instituciones educativas, mediante una aplicación móvil que permita mayor comunicación. ', NULL, NULL, '1', NULL, 2, NULL, NULL),
+(17, 'APLICACION PARA LA GESTION DE VENTA DE APARATOS ELECTRONICOS ', 'Desarrollar una Aplicación móvil para la gestion de venta de aparatos electronicos ', 'El sistema permitira la gestion de venta de aparatos electronicos para las organizaciones gremiales que comercializan dispositivos eletronicos ', NULL, NULL, '2', NULL, 2, NULL, NULL),
+(18, 'Geolocalización de Hospitales', 'Desarrollar una aplicacion movil para la geolocalizacion de hospitales', 'El sistema permitira la localizacion por gps de hospitales', NULL, NULL, '2', '', 1, '2018-09-19', NULL);
 
 -- --------------------------------------------------------
 
@@ -836,8 +850,9 @@ INSERT INTO `proyecto_estudiante` (`idProyecto`, `idEstudiante`, `estado`) VALUE
 (9, 9, 'inactivo'),
 (10, 10, 'cancelado'),
 (11, 11, 'cancelado'),
-(12, 12, 'activo'),
-(13, 13, 'activo');
+(12, 12, 'inactivo'),
+(13, 13, 'inactivo'),
+(18, 18, 'inactivo');
 
 -- --------------------------------------------------------
 
@@ -879,7 +894,9 @@ INSERT INTO `proyecto_has_area` (`idProyecto`, `idArea`) VALUES
 (16, 146),
 (16, 324),
 (17, 301),
-(17, 324);
+(17, 324),
+(18, 91),
+(18, 131);
 
 -- --------------------------------------------------------
 
@@ -1373,7 +1390,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(6, 'luis', 'ketchsoul@gmail.com', '$2y$10$PK3sq8tq31992YhwtT4i5u3kr6UEgViygZrW/pZJpnVo.ydrmmjjq', NULL, '2018-05-23 17:34:20', '2018-05-23 17:34:20');
+(6, 'luis', 'ketchsoul@gmail.com', '$2y$10$PK3sq8tq31992YhwtT4i5u3kr6UEgViygZrW/pZJpnVo.ydrmmjjq', 'E6t8UfPdfWUZFm8slUdL37Rt0ibiMJoI7FS3N2PFHP2y9ipVc3m2724oaJr2', '2018-05-23 17:34:20', '2018-10-04 03:02:32');
 
 --
 -- Índices para tablas volcadas
@@ -1482,12 +1499,12 @@ ALTER TABLE `area`
 -- AUTO_INCREMENT de la tabla `asignacion`
 --
 ALTER TABLE `asignacion`
-  MODIFY `idAsig` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `idAsig` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 --
 -- AUTO_INCREMENT de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `idCarrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idCarrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `docente`
 --
@@ -1497,7 +1514,7 @@ ALTER TABLE `docente`
 -- AUTO_INCREMENT de la tabla `estudiante`
 --
 ALTER TABLE `estudiante`
-  MODIFY `idEstudiante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `idEstudiante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de la tabla `modalidad`
 --
@@ -1507,12 +1524,12 @@ ALTER TABLE `modalidad`
 -- AUTO_INCREMENT de la tabla `pertenece`
 --
 ALTER TABLE `pertenece`
-  MODIFY `idPertenece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=284;
+  MODIFY `idPertenece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 --
 -- AUTO_INCREMENT de la tabla `proyecto`
 --
 ALTER TABLE `proyecto`
-  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de la tabla `renuncia`
 --
@@ -1522,7 +1539,7 @@ ALTER TABLE `renuncia`
 -- AUTO_INCREMENT de la tabla `tiene`
 --
 ALTER TABLE `tiene`
-  MODIFY `idTiene` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=498;
+  MODIFY `idTiene` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=441;
 --
 -- AUTO_INCREMENT de la tabla `users`
 --

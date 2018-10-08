@@ -48,7 +48,7 @@ class ProyectoController extends Controller
         $subareas = Area::orderby('nombreArea','asc')
         ->where('clasificacion','subarea')
         ->get();
-        $modalidades = Modalidad::orderby('nombreMod','asc')->paginate(500);
+        $modalidades = Modalidad::orderby('nombreMod','desc')->paginate(500);
         
 
         $res[0]=$estudiantes;

@@ -186,7 +186,7 @@ function CambiarFormulario(){
   
 switch(document.forms[0].modalidad.selectedIndex){
     case 0: 
-      document.forms[0].institucion.disabled=true;
+      document.forms[0].institucion.disabled=false;
       break;
             
             
@@ -202,7 +202,7 @@ switch(document.forms[0].modalidad.selectedIndex){
             //bloquela la opcion
       break;
     case 4: 
-      document.forms[0].institucion.disabled=false;
+      document.forms[0].institucion.disabled=true;
       break;
         
   }

@@ -63,7 +63,7 @@
 
                 <li>
                     <a class="collapsible-header waves-effect arrow-r">
-                    <i class="fa fa-university"></i>
+                    <i class="fa fa-tasks"></i>
                         Areas & Sub Areas
                         <i class="fa fa-angle-down rotate-icon"></i>
                     </a>
@@ -105,6 +105,27 @@
                         </ul>
                     </div>
                 </li>
+            <!---creando uno nuevo --> 
+               <li>
+                    <a class="collapsible-header waves-effect arrow-r">
+                    <i class="fa fa-university"></i>
+                        Carreras & Facultades 
+                        <i class="fa fa-angle-down rotate-icon"></i>
+                    </a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a href="/carreras/create" class="waves-effect">Nueva Carrera/Facultad</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> 
+                
+                
+             <!---termina lo que hiciste -->   
+                
+                
+                
                 <hr class="white">
                 
             </ul>

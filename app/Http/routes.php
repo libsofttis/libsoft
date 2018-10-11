@@ -56,4 +56,18 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::resource('/email', 'EmailController');
 
 	Route::get('/reporteGeneral', 'ProyectoController@reporteGeneral');
+	 //ruta de abajo creado por mi 
+    
+	
+   
+Route::get('carreras/create', 'CarreraController@create');
+  //Route::resource('/carreras', 'CarreraController');
+  Route::post('/carreras','CarreraController@store');
+    //Route::get('/CarreraNuevo', 'CarreraController@create');
+    // hacia abajo borra
+	Route::get('/carreras', 'CarreraController@index');
+	
+
+	Route::get('/proyecto', 'ProyectoController@edit');
+
 });

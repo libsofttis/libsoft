@@ -95,33 +95,28 @@
        <label class="col-sm-2 col-form-label">Modalidad: </label>
        <div class="col-md-4">
 
-            <select class="mdb-select colorful-select dropdown-primary col-md-12" id="modalidad" name="idModalidad" onChange="CambiarFormulario()">
+            <select class="mdb-select colorful-select dropdown-primary col-md-12" id="modalidad" name="idModalidad" onChange="CambiarFormulario()"><!--agregado-->
                 @foreach($res[3] as $modalidad)
                 <option value="{{ $modalidad-> idModalidad}}"> {{ $modalidad-> nombreMod}} </option>
                 @endforeach
             </select>
         </div>
-  </div>
-
-
-
-  <!--entrada de institucion-->
-  <div class="col-md-2">
+        
+        
+        
+        
+        
+        
+    <div class="col-md-2">
            <!-- Material input   style="display:none;"  -->
          <div class="md-form form-group">
                <input type="text" class="form-control" id="institucion" name="institucion"><!--anadido-->
                <label >Institucion dirigida:</label>
            </div>
+       </div>
+       
+       
   </div>
-
-
-
-
-
-
-
-
-
   <div class="group form-row" style=margin-top:60px;></div>
             <div class="form-row">
             <div class="col-md-8" ></div>
@@ -155,6 +150,10 @@
   
                'area': $('#area').val(),
                'subarea': $('#subarea').val(),
+               
+               
+               'institucion': $('#institucion').val(), //agregado mik
+               
 
             },
             success : function(data) {
@@ -174,8 +173,8 @@
     }
 </script>
 
-@endsection
 
+@endsection
 
 
 <script>//bloquea la parte de institucion agregado mik
@@ -185,27 +184,27 @@ function CambiarFormulario(){
  
   
 switch(document.forms[0].modalidad.selectedIndex){
-    case 0: 
-      document.forms[0].institucion.disabled=false;
-      break;
+		case 0: 
+			document.forms[0].institucion.disabled=false;
+			break;
             
             
-    case 1: 
-      document.forms[0].institucion.disabled=true;
-            //bloquela la opcion
-      break;
-    case 2: 
-      document.forms[0].institucion.disabled=true;
-      break;
+		case 1: 
+			document.forms[0].institucion.disabled=true;
+          	//bloquela la opcion
+			break;
+		case 2: 
+			document.forms[0].institucion.disabled=true;
+			break;
         case 3: 
-      document.forms[0].institucion.disabled=true;
-            //bloquela la opcion
-      break;
-    case 4: 
-      document.forms[0].institucion.disabled=true;
-      break;
+			document.forms[0].institucion.disabled=true;
+          	//bloquela la opcion
+			break;
+		case 4: 
+			document.forms[0].institucion.disabled=true;
+			break;
         
-  }
+	}
 }
 
  
@@ -227,6 +226,7 @@ switch(document.forms[0].modalidad.selectedIndex){
         */          
                   
 </script>
+
 
 
 

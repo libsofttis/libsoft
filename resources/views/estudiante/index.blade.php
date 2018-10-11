@@ -3,6 +3,9 @@
 @section('content')
 {{ csrf_field() }}
 <h1 class="text-center">ESTUDIANTES</h1>
+
+
+
 <h3 class="text-center">Estudiantes con Proyecto Vigente</h3>
 <div class="row">
   
@@ -194,19 +197,39 @@
                    <!-- Grid column -->
 
                    <!-- Grid column -->
-                   <div class="col-md-6">
+                  <div class="col-md-6">
                        <!-- Material input -->
-                       <div class="md-form form-group" id="carreradiv">
-                            <select class="mdb-select colorful-select dropdown-primary col-md-12" id="carrera">
-                               <option value="" selected disabled>Seleccionar una opcion</option>
-                               <option value="2">Ingenieria en Sistemas</option>
-                               <option value="1">Ingenieria Informatica</option>
-                           </select>
-                           <label for="carrera">Carrera <b class="h5 red-text">*</b></label>
+                       <label>Carrera: </label>
+       <div class="form-row">
+               <div class="col-md-12">
+               <select class="mdb-select colorful-select dropdown-primary col-md-12" id="carrera" name="idCarrera">
+                  <option active disabled>Seleccionar una Carrera</option>
+                   @foreach($carreras as $carrera)
+                   <option value="{{ $carrera-> idCarrera}}"> {{ $carrera-> nombreCarrera}}</option>
+                   @endforeach
+               </select>
+               </div>
+       </div> 
+
+
+
+                        <!--<label for="carrera">Carrera <b class="h5 red-text">*</b></label>--> 
                        </div>
                    </div>
+                 
+                   
+
+   
+
+                   
+                   
+                   
+                   
+                   
+                   
+                   
                    <!-- Grid column -->
-               </div>
+               <!--</div>-->
                <!-- Grid row -->               
            </div>
           
@@ -356,9 +379,26 @@
            $('#td-nombre').text(data.estudiante.nombreEst);
            $('#td-email').text(data.estudiante.emailEst);
            $('#td-telefono').text(data.estudiante.telefono);
-           if(data.estudiante.idCarrera=='1')
+
+            
+
+          //$('#td-carrera').text(data.estudiante.idCarrera);  para mostrar id
+          if(data.estudiante.idCarrera=='1')
            $('#td-carrera').text("Ingenieria Informatica");
-            else $('#td-carrera').text("Ingenieria de Sistemas");
+           if(data.estudiante.idCarrera=='2') $('#td-carrera').text("Ingenieria de Sistemas");
+           if(data.estudiante.idCarrera=='3') $('#td-carrera').text("Otros");
+           if(data.estudiante.idCarrera=='7') $('#td-carrera').text("Ingenieria Industrial");
+           if(data.estudiante.idCarrera=='8') $('#td-carrera').text("Ingenieria de Electronica");
+           if(data.estudiante.idCarrera=='9') $('#td-carrera').text("Lic. Odontologia");
+            if(data.estudiante.idCarrera=='10') $('#td-carrera').text("Lic. Bioquimica y Farmacia");
+             if(data.estudiante.idCarrera=='11') $('#td-carrera').text("Lic. Linguistica");
+              if(data.estudiante.idCarrera=='12') $('#td-carrera').text("Lic. Comunicacion Social");
+               if(data.estudiante.idCarrera=='13') $('#td-carrera').text("Lic. Veterinaria");
+                if(data.estudiante.idCarrera=='14') $('#td-carrera').text("Ing. Mecanica");
+
+         //  if(data.estudiante.idCarrera=='1')
+         //  $('#td-carrera').text("Ingenieria Informatica");
+           // else $('#td-carrera').text("Ingenieria de Sistemas");
        });
        $('#modal-show').modal('show');
    });
@@ -373,7 +413,7 @@
        $('#apellidos').val('');
        $('#email').val('');
        $('#telefono').val('');
-       $('#carreradiv').removeAttr('hidden');
+        $('#carreradiv').removeAttr('hidden');
    });
    // SCRIPT PARA AGREGAR ESTUDIANTE EN EL MODAL
    $(document).on('click', '#modal-agregar-btn', function(e) {

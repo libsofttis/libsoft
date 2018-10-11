@@ -11,7 +11,9 @@ use App\Proyecto;
 use App\Docente;
 use App\Proyecto_estudiante;
 use App\Asignacion;
+use App\Carrera;
 use DB;
+
 class EstudianteController extends Controller
 {
     /**
@@ -31,17 +33,22 @@ class EstudianteController extends Controller
         foreach ($estudiantes_t as $est) {
             $idEst->push($est->idEstudiante);
         }
-
-
+		
+		$carreras = Carrera::all();
         
 
-
+       
+       
+       
+       
+       
+       
         $estudiantes_v = Estudiante::orderBy('apellidoEst', 'asc')
         // ->join('proyecto_estudiante', 'estudiante.idEstudiante', '=', 'proyecto_estudiante.idEstudiante')
         ->whereNotIn('estudiante.idEstudiante', $idEst)
         ->get();
         // dd([$idEst, $estudiantes_v]);
-        return view('estudiante.index', compact(['estudiantes_v', 'estudiantes_t']));
+        return view('estudiante.index', compact(['estudiantes_v', 'estudiantes_t','carreras']));
 
         foreach ($estudiantes_v as $key => $value) {
             $value->estadoE = Proyecto_estudiante::where('idEstudiante', $value->idEstudiante)
@@ -50,10 +57,22 @@ class EstudianteController extends Controller
             ->where('estado', 'inactivo')
             ->echo ("asignado");
         }
+
+
+
+       // $carreras = Carrera::all();
+        //return view('estudiante.index',compact('carreras'));
+        
+
+        
+    
+        
+
     }
     public function create_sub()
     {
         $estudiantes = Estudiante::orderBy('apellidoEst', 'asc')->paginate(500);
+       
         return view('proyectos.create', compact('estudiantes'));
     }
     public function proyc_est()
@@ -95,7 +114,12 @@ class EstudianteController extends Controller
      */
     public function create()
     {
-        //
+        
+        $carrera = Carrera::orderby('nombreCarrera','desc')->paginate(500);
+
+        $res[0]=$carrera;
+        return view('estudiante.index', compact('res'));
+
     }
 
     /**
@@ -120,8 +144,10 @@ class EstudianteController extends Controller
             'apellidoEst' => $request['apellidoEst'],
             'emailEst' => $request['emailEst'],
             'telefono' => $request['telefono'],
-            'idCarrera' => $request['idCarrera'],
+           'idCarrera' => $request['idCarrera'],
         ]);
+        
+
         // return response()->json([
         //     'message' => 'Se agrego correctamente!',
         // ]);
@@ -245,4 +271,10 @@ class EstudianteController extends Controller
             'mensaje' => 'Se elimino correctamente!',
         ]);
     }
+   
+     public function Carrera()
+    {
+        return $this->belongsTo(Carrera::class);
+    }
+
 }

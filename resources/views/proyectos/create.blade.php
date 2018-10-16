@@ -47,10 +47,10 @@
        </div>
 
        <div class='col-md-2'>
-           <input placeholder="Fecha Inicio del Proyecto" type="text" name="fechaIni" class="form-control datepicker">
+           <input placeholder="Fecha Inicio" type="text" name="fechaIni" class="form-control datepicker">
        </div>
        <div class='col-md-2'>
-           <input placeholder="Fecha Fin del Proyecto" type="text" name="fechaFin" class="form-control datepicker">
+           <input placeholder="Fecha Fin" type="text" name="fechaFin" class="form-control datepicker">
        </div>         
    </div>
    <!-- Grid row -->

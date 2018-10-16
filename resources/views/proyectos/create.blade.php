@@ -46,10 +46,10 @@
            </select>
        </div>
 
-       <div class='col-md-4'>
+       <div class='col-md-2'>
            <input placeholder="Fecha Inicio del Proyecto" type="text" name="fechaIni" class="form-control datepicker">
        </div>
-       <div class='col-md-4'>
+       <div class='col-md-2'>
            <input placeholder="Fecha Fin del Proyecto" type="text" name="fechaFin" class="form-control datepicker">
        </div>         
    </div>

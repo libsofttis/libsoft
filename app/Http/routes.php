@@ -23,13 +23,32 @@ Route::group(['middleware' => ['auth']], function () {
 
 	Route::get('/home', 'HomeController@index');
 
+	//Route::post('/edit', 'ProyectoController@update');talvez innecesario
+
+	
 	Route::get('/create', 'ProyectoController@create');
 	Route::post('/create', 'ProyectoController@store');
+	
+	
 
 	Route::resource('/proyectos', 'ProyectoController');
 	Route::get('/proyectos/{id}', 'ProyectoController@show');
 
 	Route::get('/proyecto/detalle/{id}', 'ProyectoController@detalles');
+   
+	
+	
+	Route::get('proyectos/edit/{id}', 'ProyectoController@edit');
+	//Route::get('/proyectos', 'ProyectoController@edit'); talvez innecesario
+	//Route::post('proyectos/edit/{id}', 'ProyectoController@update');
+	
+	
+	
+	
+	Route::resource('/proyectos','ProyectoController');
+	Route::post('/proyectos/create', 'ProyectoController@edit');
+
+	
 
 	Route::resource('/estudiante', 'EstudianteController');
 
@@ -56,7 +75,7 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::resource('/email', 'EmailController');
 
 	Route::get('/reporteGeneral', 'ProyectoController@reporteGeneral');
-	 //ruta de abajo creado por mi 
+    //ruta de abajo creado por mi 
     
 	
    
@@ -68,6 +87,7 @@ Route::get('carreras/create', 'CarreraController@create');
 	Route::get('/carreras', 'CarreraController@index');
 	
 
-	Route::get('/proyecto', 'ProyectoController@edit');
+	
+
 
 });

@@ -29,7 +29,20 @@ class ProyectoController extends Controller
     {
         //return view ('proyectos.mainproyecto');
         $proyectos = Proyecto::orderBy('idProyecto', 'des')->paginate(500);
-        return view('proyectos.mainproyecto', compact('proyectos'));
+        
+		//Aumente 
+		//$proy_est = Proyecto:: where('proyecto.idProyecto', 'asc')
+       
+
+          
+          //  ->join('proyecto_estudiante','proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
+            //->groupby('proyecto.idProyecto')
+            //->first();
+            
+		
+		//hasta aqui return 'proy_est'
+		
+		return view('proyectos.mainproyecto', compact('proyectos'));
     }
 
     
@@ -78,6 +91,7 @@ class ProyectoController extends Controller
             'descripcion' => 'required|string',
             'periodo' => 'required|string',
             'idModalidad' => 'required|integer',
+           // 'institucion' => 'required|string',//agregado mik nos indica que campos puedon o no estar vacios 
 
         
         ]);
@@ -107,8 +121,7 @@ class ProyectoController extends Controller
             'idModalidad'=>$request['idModalidad'],
             //'estadoProyecto'=>$request['estadoProyecto'],
             'fechaRegistroProy'=>$mytime,
-            'institucion' =>$request['institucion'],
-
+            'institucion' =>$request['institucion'], //agregado mik
             //area
             //estudiante1
             //estudiante2
@@ -121,19 +134,20 @@ class ProyectoController extends Controller
         
         
         //dd([$id, $ida, $mytime->toDateString()]);
-            foreach ($areas as $area) {
-             Proyecto_has_area::create([
-            'idProyecto' => $id,
-            'idArea' => $area,
-        ]);
-               }
+        foreach ($areas as $area) {
+            Proyecto_has_area::create([
+           'idProyecto' => $id,
+           'idArea' => $area,
+       ]);
+              }
 
-               foreach ($subareas as $subarea) {
-             Proyecto_has_area::create([
-            'idProyecto' => $id,
-            'idArea' => $subarea,
-        ]);
-               }    
+              foreach ($subareas as $subarea) {
+            Proyecto_has_area::create([
+           'idProyecto' => $id,
+           'idArea' => $subarea,
+       ]);
+              }    
+               
          
         //return redirect('proyectos');
 
@@ -166,7 +180,11 @@ class ProyectoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $proyectos=Proyecto::find($id);
+        return view('proyectos.edit',compact('proyectos'));
+        //$proyectos = Proyecto::all();
+        //return view('proyectos.edit',compact('proyectos'));
+         //return view('proyectos.edit');
     }
 
     /**
@@ -178,7 +196,15 @@ class ProyectoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       
+        
+        $this->validate($request,[ 'titulo'=>'required', 'objetivos'=>'required', 'descripcion'=>'required', 'fechaIni'=>'required', 'periodo'=>'required', 'sesionDeConsejo'=>'required']);//, 'idModalidad'=>'required']);
+       
+        Proyecto::find($id)->update($request->all());
+    return redirect()->route('proyectos.index')->with('success','Registro actualizado satisfactoriamente');
+      // return response()->json([
+        //'message' => 'Se agrego correctamente!Lucho',
+    //]);
     }
 
     /**

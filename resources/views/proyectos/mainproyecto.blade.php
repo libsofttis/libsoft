@@ -55,8 +55,8 @@
   	            <td style="width: 15%"  class="text-center">
           <!-- <a class="btn-floating btn-sm btn-blue btn-modal-edit"  href="/proyecto/edit/{{$proyecto->idProyecto}}" data-toggle="tooltip" data-placement="top" title="modificar">
         			<i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>  -->
-            <a class="btn-floating btn-sm btn-green btn-modal-show" data-toggle="tooltip" data-placement="top" title="infoEstudiante"><i class="fa fa-trash mt-2 ml-1 fa-lg"></i></a>
-          <a class="btn-floating btn-sm btn-blue btn-modal-edit" data-toggle="tooltip" data-placement="top" title="editar"><i class="fa fa-edit mt-2 ml-1 fa-lg"></i></a>   
+            <a class="btn-floating btn-sm btn-green btn-modal-show" data-toggle="tooltip" data-placement="top" title="infoEstudiante"><i class="fa fa-eye mt-2 ml-2 fa-lg"></i></a>
+            <a class="btn-floating btn-sm btn-blue btn-modal-edit"  href="/proyectos/edit/{{ $proyecto->idProyecto }}" data-toggle="tooltip" data-placement="top" title="editar"> <i class="fa fa-edit mt-2 ml-1 fa-lg"></i>
                                    <!-- "proyectos/{idProyecto}/edit"  -->
       <!--   <a class="btn-floating btn-sm btn-mdb-color"  href="/proyectos/edit/{{ $proyecto->idProyecto }}" data-toggle="tooltip" data-placement="top" title="editar"> -->
               	<a class="btn-floating btn-sm btn-mdb-color"  href="/proyecto/detalle/{{ $proyecto->idProyecto }}" data-toggle="tooltip" data-placement="top" title="ver">
@@ -72,109 +72,12 @@
 		  </tbody>
 		</table>
     </div>
-<!--- desde aqui>
-<!-- Modal agregar y modificar estudiante -->
-<div class="modal fade" id="modal-proyecto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-   <div class="modal-dialog modal-notify modal-primary modal-lg" role="document">
-       <!--Content-->
-       <div class="modal-content">
-           <!--Header-->
-           <div class="modal-header">
-               <p class="heading lead">Estudiante</p>
-              
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-               <span aria-hidden="true" class="white-text">&times;</span>
-               </button>
-            </div>
-           <!--Body-->
-           <div class="modal-body">
-              <p class="red-text">*Obligatorio</p>
-               <!-- Grid row -->
-               <div class="form-row">
-                   <!-- Grid column -->
-                   <div class="col-md-12">
-                       <!-- Material input -->
-                       <div class="md-form form-group">
-                           <input type="text" class="form-control validate" id="titulo" placeholder="Nombre">
-                           <label for="nombre">Titulo <b class="h5 red-text">*</b></label>
-                       </div>
-                   </div>
-                   <!-- Grid column -->
 
-                   <!-- Grid column -->
-                  
-                   <div class="col-md-12">
-                       <!-- Material input -->
-                       <div class="md-form form-group">
-                           <input type="text" class="form-control validate" id="objetivos" placeholder="Apellidos">
-                           <label for="apellidos">Objetivo <b class="h5 red-text">*</b></label>
-                       </div>
-                   </div>
-
-
-
-
-                   <!-- Grid column -->
-               </div>
-               <!-- Grid row -->
-
-               <!-- Grid row -->
-               <div class="row">
-                   <!-- Grid column -->
-                   <div class="col-md-12">
-                       <!-- Material input -->
-                       <div class="md-form form-group">
-                           <input type="text" class="form-control validate" id="descripcion" placeholder="CI">
-                           <label for="ci">Descripcion <b class="h5 red-text">*</b></label>
-                       </div>
-                   </div>
-                   <!-- Grid column -->
-
-                   <!-- Grid column -->
-                   
-                   <!-- Grid column -->
-               </div>
-               <!-- Grid row -->
-
-               <!-- Grid row -->
-               <div class="form-row">
-                   <!-- Grid column -->
-                   <div class="col-md-6">
-                       <!-- Material input -->
-                       <div class="md-form form-group">
-                           <input type="email" class="form-control validate" id="periodo" placeholder="Email">
-                           <label for="email">Periodo <b class="h5 red-text">*</b></label>
-                       </div>
-                   </div>
-                   <!-- Grid column -->
-                   <div class="col-md-6">
-                       <!-- Material input -->
-                       <div class="md-form form-group">
-                           <input type="text" class="form-control validate" id="sesionDeConsejo" placeholder="sesionDeConsejo">
-                           <label for="email">SesionDeConsejo <b class="h5 red-text">*</b></label>
-                       </div>
-                   </div>
-                   <!-- Grid column -->
-                  
-                   <!-- Grid column -->
-               </div>
-               <!-- Grid row -->               
-           </div>
-          
-           <!--Footer-->
-           <div class="modal-footer">
-               <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-               <button class="btn btn-indigo" id="modal-agregar-btn">Guardar</button>
-           </div>  
-       </div>
-       <!--/.Content-->
-   </div>
-</div>
 
 
 
 <!---hasta aqui-->
-<!--- desde aqui>
+<!--- desde aqui-->
 <!-- Modal agregar y modificar estudiante -->
 <div class="modal fade" id="modal-estudiante" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
    <div class="modal-dialog modal-notify modal-primary modal-lg" role="document">
@@ -289,69 +192,7 @@
   <script>  //Buscar Proyectos
  //desde aqui
  // SCRIPT PARA AGREGAR ESTUDIANTE EN EL MODAL
- $(document).on('click', '#btn-modal-add', function(e) {
-       type_ = 'POST';
-       url_ = '/proyecto';
-       $('#titulo').val('');
-      // $('#area').val('');
-       $('#objetivos').val('');
-       $('#descripcion').val('');
-       $('#periodo').val('');
-       $('#sesionDeConsejo').val('');
-       
-   });
-  // SCRIPT PARA AGREGAR ESTUDIANTE EN EL MODAL
-  $(document).on('click', '#modal-agregar-btn', function(e) {
-       e.preventDefault();
-       $.ajax({
-           type: type_,
-           url: url_,
-           data: {
-               '_token': $('input[name=_token]').val(),
-               'titulo': $('#nombreProy').val(),
-               // 'area': $('#area').val(),
-               'objetivos': $('#objetivos').val(),
-               'descripcion': $('#descripcion').val(),
-               'periodo': $('#periodo').val(),
-               'sesionDeConsejo': $('#sesionDeConsejo').val(),
-           },
-           success : function(data) {
-              //console.log(data);
-               toastr.success(data.message);
-               location.reload();
-           },
-           error : function(xhr, status) {
-               toastr.error('Disculpe, existio un problema!');
-           },
-       });
-       $('#modal-proyecto').modal('hide');    
-      // clear();
-   });
-
-// SCRIPT PARA EDITAR ESTUDIANTE EN EL MODAL  #modal-agregar-btn
-   $(document).on('click', '.btn-modal-edit', function() {
-       $.get('/proyectos/'+$($(this).parents("tr")).data('id'), function(data){
-           $('#titulo').val(data.proyecto.titulo);
-         // $('#area').val(data.proyecto.area);
-           $('#objetivos').val(data.proyecto.objetivos);
-           $('#descripcion').val(data.proyecto.descripcion);
-           $('#periodo').val(data.proyecto.periodo);
-           $('#sesionDeConsejo').val(data.proyecto.sesionDeConsejo);
-
-
-           // $('#carrera').val(data.estudiante.idCarrera);
-       });
-       type_ = 'PUT';
-       url_ = '/proyecto/'+$($(this).parents("tr")).data('id');
-       //$('#carreradiv').attr('hidden', 'hidden');
-
-       $('#modal-proyecto').modal('show');
-   });
-
-   //hasta aqui
-   
-
-   
+ 
    
     //Buscar Proyectos------------
  //desde aqui
@@ -383,7 +224,7 @@
    //hasta aqui
 
 
-//mas basura
+
    $(document).ready(function(){
  	 $("#Search1").on("keyup", function() {
  	   var value = $(this).val().toLowerCase();

@@ -32,7 +32,7 @@
 		weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
 		weekdaysFull: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
 		format: 'dddd, dd mmm, yyyy',  //La Fecha es: scrip fecha
-		formatSubmit: 'yyyy/mm/dd',
+		formatSubmit: 'yyyy/mm/dd',  //brach 
 		today: 'Actual',
 		clear: 'Limpiar',
 		close: 'Cerrar',

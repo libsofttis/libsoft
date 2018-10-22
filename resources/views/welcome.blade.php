@@ -12,7 +12,7 @@
            <div class="container">
                <!-- Brand -->
                <a class="navbar-brand" href="#">
-                   <strong>SISTEMA DE REGISTRO DE PROYECTOS</strong>
+                   <strong>ASIGNACION DE TRIBUNALES</strong>
 
                 </a>
                 <!-- Collapse -->
@@ -25,7 +25,7 @@
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Mas informacion
+                            <a class="nav-link" href="#">Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>

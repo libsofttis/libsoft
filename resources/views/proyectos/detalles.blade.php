@@ -8,8 +8,16 @@
    <div class="col-md-4">
         @foreach($proy_est as $proyecto)
             <p><b>Codigo Proyecto:</b>
-            {{ $proyecto->idProyecto }}
-            </p> 
+            <?php        
+    switch( $proyecto->idModalidad ) {
+        case '1': echo 'TD'; break;
+        case '2':  echo 'PG'; break;
+        case '3': echo 'AD'; break;
+        case '4':   echo 'TE'; break;
+        case '5':   echo 'EX'; break;
+    } 
+?>{{ $proyecto->idProyecto}} </p>
+ 
             <p><b>Nombre Proyecto:</b>{{ $proyecto->titulo }}</ps>
         @endforeach
         <p><b>Areas Proyecto:</b></p>

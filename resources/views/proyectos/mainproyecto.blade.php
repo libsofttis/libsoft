@@ -40,9 +40,18 @@
 
  	   @foreach($proyectos as $proyecto)
  	   <tr data-id="{{ $proyecto->idProyecto }}">
-              <td style="width: 10%" class="text-center"> {{ $proyecto->idProyecto }} </td>  <!--10-->
-              <td style="width: 35%"> {{ $proyecto->titulo }} </td>                              <!--35-->
-              <td style="width: 35%">                                                       <!--35-->
+              <td style="width: 10%" class="text-center"> 
+   <?php        
+    switch( $proyecto->idModalidad ) {
+        case '1': echo 'TD'; break;
+        case '2':  echo 'PG'; break;
+        case '3': echo 'AD'; break;
+        case '4':   echo 'TE'; break;
+        case '5':   echo 'EX'; break;
+    } 
+     ?>   {{ $proyecto->idProyecto }} </td>  
+              <td style="width: 35%"> {{ $proyecto->titulo }} </td>                             
+              <td style="width: 35%">                                                      
                @foreach($proyecto->proyecto_has_area as $pha)
                    {{ $pha->area->nombreArea }},
                @endforeach

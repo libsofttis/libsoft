@@ -29,7 +29,16 @@
 
  	   @foreach($proyectos as $proyecto)
  	   <tr data-id="{{ $proyecto->idProyecto }}">
-              <td style="width: 15%" class="text-center"> {{ $proyecto->idProyecto }} </td>
+              <td style="width: 15%" class="text-center"> 
+              <?php        
+    switch( $proyecto->idModalidad ) {
+        case '1': echo 'TD'; break;
+        case '2':  echo 'PG'; break;
+        case '3': echo 'AD'; break;
+        case '4':   echo 'TE'; break;
+        case '5':   echo 'EX'; break;
+    } 
+?>{{ $proyecto->idProyecto }} </td>
               <td style="width: 85%"> 
                   <label ><strong>Titulo: </strong></label>  {{ $proyecto->titulo }} <br>
                   <label ><strong>Objetivos: </strong></label>  {{ $proyecto->objetivos }} <br>

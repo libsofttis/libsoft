@@ -46,11 +46,14 @@
            </select>
        </div>
 
-       <div class='col-md-2'>
-           <input placeholder="Fecha Inicio" type="text" name="fechaIni" class="form-control datepicker">
+       <div class='col-md-4'>
+          <label>Fecha inicio:</label>
+           <input placeholder="seleccione una fecha" type="text" name="fechaIni" class="form-control datepicker">
        </div>
-       <div class='col-md-2'>
-           <input placeholder="Fecha Fin" type="text" name="fechaFin" class="form-control datepicker">
+       
+       <div class='col-md-4'>
+        <label>Fecha Fin:</label>
+           <input placeholder="seleccione una fecha" type="text" name="fechaFin" class="form-control datepicker">
        </div>         
    </div>
    <!-- Grid row -->

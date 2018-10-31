@@ -4,7 +4,7 @@
         <li>
             <div class="logo-wrapper waves-light">
                 <a href="#">
-                    <img src="/img/fd.png" class="img-fluid flex-center">
+                    <img src="/img/slider.png" class="img-fluid flex-center">
                 </a>
             </div>
         </li>

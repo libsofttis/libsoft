@@ -53,7 +53,7 @@
     <!--Copyright-->
     <div class="footer-copyright py-3">
         © 2018 Copyright:
-        <a href="#"> ArkGroup.com </a>
+        <a href="#"> LibSoft.com </a>
     </div>
     <!--/.Copyright-->
 

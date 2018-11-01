@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<body style="background-image: url('/img/body.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+<body style="background-image: url('/img/fond.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
 
 <div class="row">
     <div class="col-lg-3 col-md-3" >
-    <h3 ><p class="white-text">Libsoft</p></h3>
+    <h3 ><p class="white-text">LibSoft</p></h3>
     <td><p class="white-text text-justify">
     "Libsoft" es un sistema que se encarga del registro de proyectos en todas sus modalidades ademas de la asignacion de Tribunales respectivamente 
     de la Universidad Mayor de San Simon

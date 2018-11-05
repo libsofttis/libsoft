@@ -3,27 +3,18 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <h1 align="center">REPORTE PROYECTOS</h1>
-  <!---->
-  <button type="button" class="btn btn-success" onclick="window.location='{{ url("reporteActivo") }}'">Estado Activo</button>
-  <button type="button" class="btn btn-default" onclick="window.location='{{ url("reporteInactivo") }}'">Estado Inactivo</button>
- <!-- <button type="button" class="btn btn-info" onclick="window.location='{{ url("reporteCancelado") }}'">Estado Cancelado</button> -->
-<!--
-	<div class="form-row"> -->
+	<div class="form-row">
 		
-	<!--	<div class="col-md-6 noPrint">
+	<div class="col-md-6 noPrint">
 	    		
                 <label class="sr-only" ></label>
                 <div class="md-form input-group mb-3">
-                <input type="text" class="form-control pl-0 rounded-0"  id="Search1"  type="text" placeholder="Buscar Proyectos...">
+                <input type="text" class="form-control pl-0 rounded-0" id="Search1" type="text" placeholder="Buscar por Fechas...">
                 </div>
-                
-                
-
-
-	 </div>  
-   <div class="col-md-6 text-right noPrint">
+	 </div> 
+   <div class="col-md-3 text-right noPrint">
      <button type="button" class="btn btn-secondary" id="btn-imprimir">Imprimir</button>
-   </div>   -->
+   </div> 
         
 	<div >
 		<table class="table table-striped">
@@ -52,7 +43,11 @@
                   <label ><strong>Titulo: </strong></label>  {{ $proyecto->titulo }} <br>
                   <label ><strong>Objetivos: </strong></label>  {{ $proyecto->objetivos }} <br>
                   <label ><strong>Descripción: </strong></label>  {{ $proyecto->descripcion }} <br>
-                  <label ><strong>Estado del Proyecto: </strong></label>  {{ $proyecto->estado }} <br>
+                  <label ><strong>Estado del Proyecto: </strong></label>
+                  
+       
+                  {{ $proyecto->estado}} 
+                  <br>
                   <label ><strong>Fecha Registro: </strong></label>  {{ $proyecto->fechaRegistroProy }} <br>
                   <label ><strong>Apellido Estudiante: </strong></label>  {{ $proyecto->apellidoEst }} <br>
                   <label ><strong>Nombre Estudiante: </strong></label>  {{ $proyecto->nombreEst }} <br>
@@ -98,24 +93,14 @@
 @endsection
 @section('script')
               
-  <script>
-    $(document).ready(function(){
-      //  $("#datepicker").datepicker();
+ <script>
+$(document).ready(function(){
  	$("#Search1").on("keyup", function() {
-        
-
-
-
-
- 	   var value = $(this).val().toLowerCase();
-        
- 	   $("#table1 tr").filter(function() {
- 	     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          
+ 	  var value = $(this).val().toLowerCase();
+ 	 $("#table1 tr").filter(function() {
+ 	   $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
  	   }); }); });
-//que hacer
 
-//ahora
   
   
 document.getElementById("btn-imprimir").onclick = function() {imprimir()};

@@ -63,7 +63,9 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::get('/estudiante/proyecto/{idProy}/{idDoc}/asignacion', 'ProyectoController@asignarTribunal');
 	Route::post('/estudiante/proyecto/renuncia', 'ProyectoController@renunciaTribunal');
 
-	
+	Route::get('/reporteInactivo', 'ProyectoController@reporteInactivo');
+	Route::get('/reporteActivo', 'ProyectoController@reporteActivo');
+	//Route::get('/reporteCancelado', 'ProyectoController@reporteCancelado');
 	
 
 	Route::resource('/tribunales', 'AsignacionController');

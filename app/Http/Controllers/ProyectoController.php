@@ -115,7 +115,7 @@ class ProyectoController extends Controller
             'objetivos'=>$request['objetivos'],
             'descripcion'=>$request['descripcion'],
             'fechaIni'=>$request['fechaIni'],
-            'fechaFin'=>$request['fechaFin'],
+            //'fechaFin'=>$request['fechaFin'],
             'periodo'=>$request['periodo'],
             'sesionDeConsejo'=>$request['sesionDeConsejo'],
             'idModalidad'=>$request['idModalidad'],
@@ -171,6 +171,47 @@ class ProyectoController extends Controller
             'proyecto' => Proyecto::where('idProyecto', $id)->firstOrFail(),
         ]);
     }
+    //que es esto
+    public function reporteInactivo(){
+        
+
+        $proyectos = Proyecto::orderBy('proyecto.idProyecto', 'asc')
+        ->where('estado', 'inactivo')
+        ->join('proyecto_estudiante', 'proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
+        ->join('estudiante', 'proyecto_estudiante.idEstudiante','=','estudiante.idEstudiante')
+        ->join('carrera', 'estudiante.idCarrera','=','carrera.idCarrera')
+        ->get();
+        
+        return view('proyectos.reporteInactivo', compact('proyectos'));
+
+    }
+    public function reporteActivo(){
+        
+        $proyectos = Proyecto::orderBy('proyecto.idProyecto', 'asc')
+        ->where('estado', 'activo')
+        ->join('proyecto_estudiante', 'proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
+        ->join('estudiante', 'proyecto_estudiante.idEstudiante','=','estudiante.idEstudiante')
+        ->join('carrera', 'estudiante.idCarrera','=','carrera.idCarrera')
+        ->get();
+        
+        return view('proyectos.reporteInactivo', compact('proyectos'));
+
+    }
+    public function reporteCancelado(){
+        
+
+        $proyectos = Proyecto::orderBy('proyecto.idProyecto', 'asc')
+        ->where('estado', 'cancelado')
+        ->join('proyecto_estudiante', 'proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
+        ->join('estudiante', 'proyecto_estudiante.idEstudiante','=','estudiante.idEstudiante')
+        ->join('carrera', 'estudiante.idCarrera','=','carrera.idCarrera')
+        ->get();
+        
+        return view('proyectos.reporteInactivo', compact('proyectos'));
+
+    }
+    //no se
+
 
     /**
      * Show the form for editing the specified resource.

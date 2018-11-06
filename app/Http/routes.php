@@ -77,7 +77,9 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::resource('/email', 'EmailController');
 
 	Route::get('/reporteGeneral', 'ProyectoController@reporteGeneral');
-    //ruta de abajo creado por mi 
+	//ruta de abajo creado por mi 
+	
+	Route::get('/reporteGeneralFecha', 'ProyectoController@reporteGeneralFecha');
     
 	
    

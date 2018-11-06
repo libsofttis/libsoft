@@ -544,6 +544,30 @@ class ProyectoController extends Controller
         return view('proyectos.reporteGeneral', compact('proyectos'));
     }
 
+    public function reporteGeneralFecha()
+    {
+        $fechaIni='2018-01-01';
+        $fechaFin='2018-02-01';
+        // $desde=$_POST['bd-desde'];
+        // $hasta=$_POST['bd-hasta'];
+        //COMPROBAMOS QUE LAS FECHAS EXISTAN
+    // if(isset($desde)==false){
+	//     $desde = $hasta;
+    // }
+
+    // if(isset($hasta)==false){
+	//     $hasta = $desde;
+    // }
+        $proyectos = Proyecto::whereBetween('fechaIni', [$fechaIni, $fechaFin])
+        ->orderBy('proyecto.idProyecto', 'asc')
+        ->join('proyecto_estudiante', 'proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
+        ->join('estudiante', 'proyecto_estudiante.idEstudiante','=','estudiante.idEstudiante')
+        ->join('carrera', 'estudiante.idCarrera','=','carrera.idCarrera')
+        ->get();
+        
+        return view('proyectos.reporteGeneralFecha', compact('proyectos'));
+    }
+
     public function defensa(Request $request){
         Proyecto::where('idProyecto', $request->idProyecto)
         ->update(

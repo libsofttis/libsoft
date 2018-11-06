@@ -539,6 +539,12 @@ class ProyectoController extends Controller
         ->join('proyecto_estudiante', 'proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
         ->join('estudiante', 'proyecto_estudiante.idEstudiante','=','estudiante.idEstudiante')
         ->join('carrera', 'estudiante.idCarrera','=','carrera.idCarrera')
+         
+        ->join('asignacion', 'proyecto.idProyecto','=','asignacion.idProyecto')
+        ->join('docente', 'asignacion.idDoc','=','docente.idDoc')
+        ->groupby('proyecto.idProyecto')
+
+
         ->get();
         
         return view('proyectos.reporteGeneral', compact('proyectos'));

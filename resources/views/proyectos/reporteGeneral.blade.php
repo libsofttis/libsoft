@@ -60,7 +60,8 @@
 		  <thead>
 		    <tr>
 		      <th style="width: 15%"><font size="3">Codigo Proyecto</font></th>
-		      <th style="width: 85% text-center" class="text-center"><font size="3">Descripcion de los Proyectos</font></th>
+		      <th style="width: 70% text-center" class="text-center"><font size="3">Descripcion de los Proyectos</font></th>
+          <th style="width: 15%"><font size="3"  class="text-center">Acciones</font></th>   
  	   </tr>
  	 </thead>
     
@@ -78,20 +79,25 @@
         case '5':   echo 'EX'; break;
     } 
 ?>{{ $proyecto->idProyecto }} </td>
-              <td style="width: 85%"> 
-                  <label ><strong>Titulo: </strong></label>  {{ $proyecto->titulo }} <br>
-                  <label ><strong>Objetivos: </strong></label>  {{ $proyecto->objetivos }} <br>
-                  <label ><strong>Descripción: </strong></label>  {{ $proyecto->descripcion }} <br>
-                  <label ><strong>Estado del Proyecto: </strong></label>  {{ $proyecto->estado }} <br>
-                  <label ><strong>Fecha Registro: </strong></label>  {{ $proyecto->fechaRegistroProy }} <br>
-                  <label ><strong>Apellido Estudiante: </strong></label>  {{ $proyecto->apellidoEst }} <br>
-                  <label ><strong>Nombre Estudiante: </strong></label>  {{ $proyecto->nombreEst }} <br>
-                  <label ><strong>C.I. Estudiante: </strong></label>  {{ $proyecto->ciEst }} <br>
-                  <label ><strong>Email Estudiante: </strong></label>  {{ $proyecto->emailEst }} <br>
-                  <label ><strong>Telefono Estudiante: </strong></label>  {{ $proyecto->telefono }} <br>
-                  <label ><strong>Carrera Estudiante: </strong></label>  {{ $proyecto->nombreCarrera }} <br>
-                  <label ><strong>fecha inicio: </strong></label>  {{ $proyecto->fechaIni }} <br>
+              <td style="width: 70%"> 
+                   <label ><strong>Nombre Estudiante: </strong></label>  {{ $proyecto->nombreEst }} <br>
+              <label ><strong>Apellido Estudiante: </strong></label>  {{ $proyecto->apellidoEst }} <br>
+              <label ><strong>Titulo: </strong></label>  {{ $proyecto->titulo }} <br>
+              
+              <label ><strong>Fecha Registro: </strong></label>  {{ $proyecto->fechaRegistroProy }} <br>
+              
+
+                 <label ><strong>Tutor: </strong></label> 
+               
+                
+                
+                  {{ $proyecto-> nombreDoc." ".$proyecto-> apePaternoDoc." ".$proyecto-> apeMaternoDoc}} <br> 
+             </td>
+            <td style="width: 15%"  class="text-left">
+              <a class="btn-floating btn-sm btn-mdb-color"  href="/proyecto/detalle/{{ $proyecto->idProyecto }}" data-toggle="tooltip" data-placement="top" title="Mas informacion">
+              <i class="fa fa-eye mt-2 ml-2 fa-lg"></i></a>
               </td>
+
         	</tr>
 		  	@endforeach
 		    

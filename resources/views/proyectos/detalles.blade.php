@@ -65,7 +65,7 @@
     </div>
 </div>
 <br>
-<h3>Tutores y Tribunales</h3>
+<h3>Tutores y Tribunales</h3> <br/>
 <div class="row">
     <div class="col-md-4">
         <h4>Estudiante(s)</h4>

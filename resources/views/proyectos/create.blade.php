@@ -45,7 +45,7 @@
                @endforeach
            </select>
        </div>
-
+<!--
        <div class='col-md-4'>
           <label>Fecha inicio:</label>
            <input placeholder="seleccione una fecha" type="text" name="fechaIni" class="form-control datepicker">
@@ -54,8 +54,8 @@
        <div class='col-md-4'>
         <label>Fecha Fin:</label>
            <input placeholder="seleccione una fecha" type="text" name="fechaFin" class="form-control datepicker">
-       </div>         
-   </div>
+       </div>  -->       
+   </div>   
    <!-- Grid row -->
    <div class="row">
        <!-- Material input -->

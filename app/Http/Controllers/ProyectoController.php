@@ -17,7 +17,8 @@ use App\Proyecto_estudiante;
 use App\Docente;
 use App\Asignacion;
 use App\Renuncia;
-
+use App\Proyecto_est;
+use DB;
 class ProyectoController extends Controller
 {
     /**
@@ -30,11 +31,12 @@ class ProyectoController extends Controller
         //return view ('proyectos.mainproyecto');
         $proyectos = Proyecto::orderBy('idProyecto', 'des')->paginate(500);
         
+        
 		//Aumente 
 		//$proy_est = Proyecto:: where('proyecto.idProyecto', 'asc')
-       
-
-          
+        
+        
+        
           //  ->join('proyecto_estudiante','proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
             //->groupby('proyecto.idProyecto')
             //->first();
@@ -82,8 +84,13 @@ class ProyectoController extends Controller
     {
 
         $mytime = \Carbon\Carbon::now();
+        
+       
+       // $endDate = $mytime->addYear(2);
+       //$myFecha = \Carbon\Carbon::now();
+       // $endDate = $myFecha->addYear(1);
 
-
+       
 
         $this->validate($request, [
             'titulo' => 'required|string',
@@ -111,10 +118,11 @@ class ProyectoController extends Controller
         ]);*/
 
        Proyecto::create([
+       
             'titulo' => $request['titulo'],
             'objetivos'=>$request['objetivos'],
             'descripcion'=>$request['descripcion'],
-            'fechaIni'=>$request['fechaIni'],
+            //'fechaIni'=>$request['fechaIni'],
             //'fechaFin'=>$request['fechaFin'],
             'periodo'=>$request['periodo'],
             'sesionDeConsejo'=>$request['sesionDeConsejo'],
@@ -122,6 +130,8 @@ class ProyectoController extends Controller
             //'estadoProyecto'=>$request['estadoProyecto'],
             'fechaRegistroProy'=>$mytime,
             'institucion' =>$request['institucion'], //agregado mik
+
+           
             //area
             //estudiante1
             //estudiante2
@@ -239,7 +249,7 @@ class ProyectoController extends Controller
     {
        
         
-        $this->validate($request,[ 'titulo'=>'required', 'objetivos'=>'required', 'descripcion'=>'required', 'fechaIni'=>'required', 'periodo'=>'required', 'sesionDeConsejo'=>'required']);//, 'idModalidad'=>'required']);
+        $this->validate($request,[ 'titulo'=>'required', 'objetivos'=>'required', 'descripcion'=>'required', 'fechaRegistroProy'=>'required', 'periodo'=>'required', 'sesionDeConsejo'=>'required']);//, 'idModalidad'=>'required']);
        
         Proyecto::find($id)->update($request->all());
     return redirect()->route('proyectos.index')->with('success','Registro actualizado satisfactoriamente');
@@ -535,25 +545,64 @@ class ProyectoController extends Controller
 
     public function reporteGeneral()
     {
-        $proyectos = Proyecto::orderBy('proyecto.idProyecto', 'asc')
-        ->join('proyecto_estudiante', 'proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
-        ->join('estudiante', 'proyecto_estudiante.idEstudiante','=','estudiante.idEstudiante')
-        ->join('carrera', 'estudiante.idCarrera','=','carrera.idCarrera')
+       // $tutores = Asignacion::where('idProyecto', $idProyecto)
+        
+        
+
+      $proyectos = Proyecto::orderBy('proyecto.idProyecto','asc')
+       ->join('proyecto_estudiante', 'proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
+      ->join('estudiante', 'proyecto_estudiante.idEstudiante','=','estudiante.idEstudiante')
+       ->join('carrera', 'estudiante.idCarrera','=','carrera.idCarrera')
+       // ->get();
+        
+         // $tutores = Proyecto::orderBy('proyecto.idProyecto', 'asc')
+
+
+//parece
          
         ->join('asignacion', 'proyecto.idProyecto','=','asignacion.idProyecto')
         ->join('docente', 'asignacion.idDoc','=','docente.idDoc')
         ->groupby('proyecto.idProyecto')
 
+        //parece
 
+         //$tutores = Asignacion::orderBy('asignacion.idAsig','asc')
+        //->join('docente', 'asignacion.idDoc','=','docente.idDoc')
+
+       
+        
         ->get();
+       //->join('pertenece', 'carrera.idCarrera','=','pertenece.idCarrera')
+       //->join('docente', 'pertenece.idDoc','=','docente.idDoc')
+      
+      // $proyectox = Proyecto::orderBy('proyecto.idProyecto', 'asc')
+        // ->join('asignacion', 'proyecto.idProyecto','=','asignacion.idProyecto')
+        // ->join('docente', 'asignacion.idDoc','=','docente.idDoc')
+
+       //  $proyectox = Docente::orderBy('docente.idDoc', 'asc')
+        // ->where('idAsig', '1')
+        //->join('asignacion', 'proyecto.idProyecto','=','asignacion.idProyecto')
+       //  ->join('docente', 'asignacion.idDoc','=','docente.idDoc')
+        //->get();
+
+        //$proyectox = Proyecto::orderBy('proyecto.idProyecto', 'asc')
+        
+        
+        //->get();
+
+
+        
         
         return view('proyectos.reporteGeneral', compact('proyectos'));
     }
-
     public function reporteGeneralFecha()
-    {
-        $fechaIni='2018-01-01';
-        $fechaFin='2018-02-01';
+    { 
+      // $desde = $request->get("desde");
+      // $hasta = $request->get("hasta");
+        
+       
+       $desde='2018-01-01';
+       $hasta='2018-02-01';
         // $desde=$_POST['bd-desde'];
         // $hasta=$_POST['bd-hasta'];
         //COMPROBAMOS QUE LAS FECHAS EXISTAN
@@ -564,7 +613,7 @@ class ProyectoController extends Controller
     // if(isset($hasta)==false){
 	//     $hasta = $desde;
     // }
-        $proyectos = Proyecto::whereBetween('fechaIni', [$fechaIni, $fechaFin])
+        $proyectos = Proyecto::whereBetween('fechaRegistroProy', [$desde, $hasta])
         ->orderBy('proyecto.idProyecto', 'asc')
         ->join('proyecto_estudiante', 'proyecto.idProyecto','=','proyecto_estudiante.idProyecto')
         ->join('estudiante', 'proyecto_estudiante.idEstudiante','=','estudiante.idEstudiante')
@@ -572,6 +621,10 @@ class ProyectoController extends Controller
         ->get();
         
         return view('proyectos.reporteGeneralFecha', compact('proyectos'));
+
+
+        
+    
     }
 
     public function defensa(Request $request){

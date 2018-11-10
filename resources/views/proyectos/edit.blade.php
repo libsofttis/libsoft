@@ -54,25 +54,19 @@
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-									<label for="fechaIni">Fecha Inicio <b class="h7 red-text">*</b></label>	
-										<input type="text" name="fechaIni" id="fechaIni" class="form-control input-sm"  value="{{$proyectos->fechaIni}}">
+									<label for="fechaRegistroProy">Fecha Registro <b class="h7 red-text">*</b></label>	
+										<input type="text" name="fechaRegistroProy" id="fechaRegistroProy" class="form-control input-sm"  value="{{$proyectos->fechaRegistroProy}}">
 									</div>
 								</div>
-								<div class="col-xs-6 col-sm-6 col-md-6">
-									<div class="form-group">
-									<label for="fechaFin">Fecha Fin <b class="h7 red-text">*</b></label>	
-										<input type="text" name="fechaFin" id="fechaFin" class="form-control input-sm" value="{{$proyectos->fechaFin}}">
-									</div>
-								</div>
-							</div>
-							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 							<div class="form-group">
 							<label for="periodo">Periodo <b class="h7 red-text">*</b></label>	
 								
 								<input type="text" name="periodo" id="periodo" class="form-control input-sm" value="{{$proyectos->periodo}}">
 							</div>
-                     </div>  </div>
+                     </div> 
+							</div>
+							
                     <div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">

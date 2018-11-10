@@ -41,8 +41,36 @@
             {{ $proyecto->fechaRegistroProy }}
             </p> 
             </p> 
-            <p><b>Fecha Fin:</b>
-            {{ $proyecto->fechaFin }}
+            <p><b>Fecha Vencimiento:</b>
+            <?php        
+    switch( $proyecto->idModalidad ) {
+        case '1': 
+        $fechaFFase =($proyecto->fechaRegistroProy );
+        $nuevafecha = new DateTime($fechaFFase);
+        $nuevafecha->modify('+365 day');
+        echo $nuevafecha->format('Y-m-d');break;
+        case '2':  
+        $fechaFFase =($proyecto->fechaRegistroProy );
+        $nuevafecha = new DateTime($fechaFFase);
+        $nuevafecha->modify('+730 day');
+        echo $nuevafecha->format('Y-m-d');break;
+        case '3': 
+        $fechaFFase =($proyecto->fechaRegistroProy );
+        $nuevafecha = new DateTime($fechaFFase);
+        $nuevafecha->modify('+365 day');
+        echo $nuevafecha->format('Y-m-d');break;
+        case '4':   
+        $fechaFFase =($proyecto->fechaRegistroProy );
+        $nuevafecha = new DateTime($fechaFFase);
+        $nuevafecha->modify('+1096 day');
+        echo $nuevafecha->format('Y-m-d');break;
+        case '5':   echo 'EX'; break;
+    } 
+    
+?>       
+
+
+
             </p> 
 
         @endforeach

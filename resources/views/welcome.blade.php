@@ -64,15 +64,7 @@
         <!--Carousel Wrapper-->
         <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
             <!--Indicators-->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-                <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-                <li data-target="#carousel-example-1z" data-slide-to="3"></li>
-                <li data-target="#carousel-example-1z" data-slide-to="4"></li>
-                <li data-target="#carousel-example-1z" data-slide-to="5"></li>
-                <li data-target="#carousel-example-1z" data-slide-to="6"></li>
-            </ol>
+            
             <!--/.Indicators-->
             <!--Slides-->
             <div class="carousel-inner" role="listbox">
@@ -94,29 +86,29 @@
             
             
                 <a href="#carousel-example-1z" data-slide-to="0" class="nav-link border border-light rounded" title="uno de los primeros pasos es tomar la materia de perfil para el aprendizaje y elaboracion del proyecto con el docente deseado como requerimiento el estudiante debe tener aprobadas todas las materias que se encuentran en los semestres inferiores al nivel de la misma (aprobación hasta el octavo semestre de la actual malla curricular) o aprobación de por lo menos el 80% de las materias de la Carrera">
-                <i class="fa fa-check-square"></i>Estar inscrito en la materia de perfil </a>   
+                <font size=4 color="orange">1&nbsp;</font> Estar inscrito en la materia de perfil </a>   
                 
                 <a href="#carousel-example-1z" data-slide-to="1"  class="nav-link border border-light rounded" title="es preciso el llenar el formulario que sera como el borrador del perfil que debera ser revisado y corregido por el tutor, en el area del conocimiento del perfil.">
-                <i class="fa fa-check-square"></i>Llenar el formulario</a>
+                <font size=4 color="orange">2&nbsp;</font> Llenar el formulario</a>
             
                 
                 <a href="#carousel-example-1z" data-slide-to="2"  class="nav-link border border-light rounded" title="El borrador del perfil deberá ser elaborado por el estudiante con el apoyo académico del docente, en el área de la metodología de la investigación siendo asi revisado y corregido por el tutor, en el área del conocimiento del perfil, deberá cumplir todas las etapas del cronograma de elaboracion de perfil, de manera obligatoria">
-                <i class="fa fa-check-square"></i>Tener la aprobacion del tutor </a>
+                <font size=4 color="orange">3&nbsp;</font> Tener la aprobacion del tutor </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="3"  class="nav-link border border-light rounded" title="se debera realizar una carta para el director de carrera con las especificaciones necesarias">
-                <i class="fa fa-check-square"></i>Elaborar una carta para el director de carrera </a>
+                <font size=4 color="orange">4&nbsp;</font> Elaborar una carta para el director de carrera </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="4" class="nav-link border border-light rounded" title="hacer el envio de la carta propiamente con el formulario previamente realizado para la ceptacion ">
-                <i class="fa fa-check-square"></i>Enviar la carta y el formulario de direccion</a> 
+                <font size=4 color="orange">5&nbsp;</font> Enviar la carta y el formulario de direccion</a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="5"  class="nav-link border border-light rounded" title="es necesario la firma de aprobacion del proyecto de investigacion a realizar ">
-                <i class="fa fa-check-square"></i>Obtencion de firma de carrera </a> 
+                <font size=4 color="orange">6&nbsp;</font> Obtencion de firma de carrera </a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="6"  class="nav-link border border-light rounded" title="aprobado el proyecdo de investigacion se debe realizar el registro en el CS">
-                <i class="fa fa-check-square"></i>Registro en la pagina del CS</a> 
+                <font size=4 color="orange">7&nbsp;</font> Registro en la pagina del CS</a> 
                 
-                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
-                <i class="fa fa-check-square"></i>Mas informacion</a> 
+                <a href="#carousel-example-1z" data-slide-to="7" class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">TRIBUNALES&nbsp;</font></a> 
             
             
                 </td>
@@ -160,29 +152,29 @@
            <tr>
               <td>
                 <a href="#carousel-example-1z" data-slide-to="0"  class="nav-link border border-light rounded" title="uno de los primeros pasos es tomar la materia de perfil para el aprendizaje y elaboracion del proyecto con el docente deseado como requerimiento el estudiante debe tener aprobadas todas las materias que se encuentran en los semestres inferiores al nivel de la misma (aprobación hasta el octavo semestre de la actual malla curricular) o aprobación de por lo menos el 80% de las materias de la Carrera">
-                <i class="fa fa-check-square"></i>Estar inscrito en la materia de perfil </a>   
+                <font size=4 color="orange">1&nbsp;</font> Estar inscrito en la materia de perfil </a>   
                 
                 <a href="#carousel-example-1z" data-slide-to="1"  class="nav-link border border-light rounded" title="es preciso el llenar el formulario que sera como el borrador del perfil que debera ser revisado y corregido por el tutor, en el area del conocimiento del perfil.">
-                <i class="fa fa-check-square"></i>Llenar el formulario</a>
+                <font size=4 color="orange">2&nbsp;</font> Llenar el formulario</a>
             
                 
                 <a href="#carousel-example-1z" data-slide-to="2"  class="nav-link border border-light rounded" title="El borrador del perfil deberá ser elaborado por el estudiante con el apoyo académico del docente, en el área de la metodología de la investigación siendo asi revisado y corregido por el tutor, en el área del conocimiento del perfil, deberá cumplir todas las etapas del cronograma de elaboracion de perfil, de manera obligatoria">
-                <i class="fa fa-check-square"></i>Tener la aprobacion del tutor </a>
+                <font size=4 color="orange">3&nbsp;</font> Tener la aprobacion del tutor </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="3"  class="nav-link border border-light rounded" title="se debera realizar una carta para el director de carrera con las especificaciones necesarias">
-                <i class="fa fa-check-square"></i>Elaborar una carta para el director de carrera </a>
+                <font size=4 color="orange">4&nbsp;</font> Elaborar una carta para el director de carrera </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="4" class="nav-link border border-light rounded" title="hacer el envio de la carta propiamente con el formulario previamente realizado para la ceptacion ">
-                <i class="fa fa-check-square"></i>Enviar la carta y el formulario de direccion</a> 
+                <font size=4 color="orange">5&nbsp;</font> Enviar la carta y el formulario de direccion</a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="5"  class="nav-link border border-light rounded" title="es necesario la firma de aprobacion del proyecto de investigacion a realizar ">
-                <i class="fa fa-check-square"></i>Obtencion de firma de carrera </a> 
+                <font size=4 color="orange">6&nbsp;</font> Obtencion de firma de carrera </a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="6"  class="nav-link border border-light rounded" title="aprobado el proyecdo de investigacion se debe realizar el registro en el CS">
-                <i class="fa fa-check-square"></i>Registro en la pagina del CS</a> 
+                <font size=4 color="orange">7&nbsp;</font> Registro en la pagina del CS</a> 
 
-                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
-                <i class="fa fa-check-square"></i>Mas informacion</a> 
+                <a href="#carousel-example-1z" data-slide-to="7" class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">TRIBUNALES&nbsp;</font></a> 
             
                 </td>
             </tr>
@@ -220,29 +212,29 @@
            <tr>
               <td>
                 <a href="#carousel-example-1z" data-slide-to="0" class="nav-link border border-light rounded" title="uno de los primeros pasos es tomar la materia de perfil para el aprendizaje y elaboracion del proyecto con el docente deseado como requerimiento el estudiante debe tener aprobadas todas las materias que se encuentran en los semestres inferiores al nivel de la misma (aprobación hasta el octavo semestre de la actual malla curricular) o aprobación de por lo menos el 80% de las materias de la Carrera">
-                <i class="fa fa-check-square"></i>Estar inscrito en la materia de perfil </a>   
+                <font size=4 color="orange">1&nbsp;</font> Estar inscrito en la materia de perfil </a>   
                 
                 <a href="#carousel-example-1z" data-slide-to="1"  class="nav-link border border-light rounded" title="es preciso el llenar el formulario que sera como el borrador del perfil que debera ser revisado y corregido por el tutor, en el area del conocimiento del perfil.">
-                <i class="fa fa-check-square"></i>Llenar el formulario</a>
+                <font size=4 color="orange">2&nbsp;</font> Llenar el formulario</a>
             
                 
                 <a href="#carousel-example-1z" data-slide-to="2"  class="nav-link border border-light rounded" title="El borrador del perfil deberá ser elaborado por el estudiante con el apoyo académico del docente, en el área de la metodología de la investigación siendo asi revisado y corregido por el tutor, en el área del conocimiento del perfil, deberá cumplir todas las etapas del cronograma de elaboracion de perfil, de manera obligatoria">
-                <i class="fa fa-check-square"></i>Tener la aprobacion del tutor </a>
+                <font size=4 color="orange">3&nbsp;</font> Tener la aprobacion del tutor </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="3"  class="nav-link border border-light rounded" title="se debera realizar una carta para el director de carrera con las especificaciones necesarias">
-                <i class="fa fa-check-square"></i>Elaborar una carta para el director de carrera </a>
+                <font size=4 color="orange">4&nbsp;</font> Elaborar una carta para el director de carrera </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="4" class="nav-link border border-light rounded" title="hacer el envio de la carta propiamente con el formulario previamente realizado para la ceptacion ">
-                <i class="fa fa-check-square"></i>Enviar la carta y el formulario de direccion</a> 
+                <font size=4 color="orange">5&nbsp;</font> Enviar la carta y el formulario de direccion</a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="5"  class="nav-link border border-light rounded" title="es necesario la firma de aprobacion del proyecto de investigacion a realizar ">
-                <i class="fa fa-check-square"></i>Obtencion de firma de carrera </a> 
+                <font size=4 color="orange">6&nbsp;</font> Obtencion de firma de carrera </a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="6"  class="nav-link border border-light rounded" title="aprobado el proyecdo de investigacion se debe realizar el registro en el CS">
-                <i class="fa fa-check-square"></i>Registro en la pagina del CS</a> 
+                <font size=4 color="orange">7&nbsp;</font> Registro en la pagina del CS</a> 
 
-                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
-                <i class="fa fa-check-square"></i>Mas informacion</a> 
+                <a href="#carousel-example-1z" data-slide-to="7"  class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">TRIBUNALES&nbsp;</font></a> 
 
                 </td>
             </tr>
@@ -280,29 +272,29 @@
            <tr>
               <td>
                 <a href="#carousel-example-1z" data-slide-to="0" class="nav-link border border-light rounded" title="uno de los primeros pasos es tomar la materia de perfil para el aprendizaje y elaboracion del proyecto con el docente deseado como requerimiento el estudiante debe tener aprobadas todas las materias que se encuentran en los semestres inferiores al nivel de la misma (aprobación hasta el octavo semestre de la actual malla curricular) o aprobación de por lo menos el 80% de las materias de la Carrera">
-                <i class="fa fa-check-square"></i>Estar inscrito en la materia de perfil </a>   
+                <font size=4 color="orange">1&nbsp;</font> Estar inscrito en la materia de perfil </a>   
                 
                 <a href="#carousel-example-1z" data-slide-to="1"  class="nav-link border border-light rounded" title="es preciso el llenar el formulario que sera como el borrador del perfil que debera ser revisado y corregido por el tutor, en el area del conocimiento del perfil.">
-                <i class="fa fa-check-square"></i>Llenar el formulario</a>
+                <font size=4 color="orange">2&nbsp;</font> Llenar el formulario</a>
             
                 
                 <a href="#carousel-example-1z" data-slide-to="2"  class="nav-link border border-light rounded" title="El borrador del perfil deberá ser elaborado por el estudiante con el apoyo académico del docente, en el área de la metodología de la investigación siendo asi revisado y corregido por el tutor, en el área del conocimiento del perfil, deberá cumplir todas las etapas del cronograma de elaboracion de perfil, de manera obligatoria">
-                <i class="fa fa-check-square"></i>Tener la aprobacion del tutor </a>
+                <font size=4 color="orange">3&nbsp;</font> Tener la aprobacion del tutor </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="3"  class="nav-link border border-light rounded" title="se debera realizar una carta para el director de carrera con las especificaciones necesarias">
-                <i class="fa fa-check-square"></i>Elaborar una carta para el director de carrera </a>
+                <font size=4 color="orange">4&nbsp;</font> Elaborar una carta para el director de carrera </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="4" class="nav-link border border-light rounded" title="hacer el envio de la carta propiamente con el formulario previamente realizado para la ceptacion ">
-                <i class="fa fa-check-square"></i>Enviar la carta y el formulario de direccion</a> 
+                <font size=4 color="orange">5&nbsp;</font> Enviar la carta y el formulario de direccion</a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="5"  class="nav-link border border-light rounded" title="es necesario la firma de aprobacion del proyecto de investigacion a realizar ">
-                <i class="fa fa-check-square"></i>Obtencion de firma de carrera </a> 
+                <font size=4 color="orange">6&nbsp;</font> Obtencion de firma de carrera </a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="6"  class="nav-link border border-light rounded" title="aprobado el proyecdo de investigacion se debe realizar el registro en el CS">
-                <i class="fa fa-check-square"></i>Registro en la pagina del CS</a> 
+                <font size=4 color="orange">7&nbsp;</font> Registro en la pagina del CS</a> 
 
-                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
-                <i class="fa fa-check-square"></i>Mas informacion</a> 
+                <a href="#carousel-example-1z" data-slide-to="7"  class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">TRIBUNALES&nbsp;</font></a> 
 
                 </td>
             </tr>
@@ -340,29 +332,29 @@
            <tr>
               <td>
                 <a href="#carousel-example-1z" data-slide-to="0" class="nav-link border border-light rounded" title="uno de los primeros pasos es tomar la materia de perfil para el aprendizaje y elaboracion del proyecto con el docente deseado como requerimiento el estudiante debe tener aprobadas todas las materias que se encuentran en los semestres inferiores al nivel de la misma (aprobación hasta el octavo semestre de la actual malla curricular) o aprobación de por lo menos el 80% de las materias de la Carrera">
-                <i class="fa fa-check-square"></i>Estar inscrito en la materia de perfil </a>   
+                <font size=4 color="orange">1&nbsp;</font> Estar inscrito en la materia de perfil </a>   
                 
                 <a href="#carousel-example-1z" data-slide-to="1"  class="nav-link border border-light rounded" title="es preciso el llenar el formulario que sera como el borrador del perfil que debera ser revisado y corregido por el tutor, en el area del conocimiento del perfil.">
-                <i class="fa fa-check-square"></i>Llenar el formulario</a>
+                <font size=4 color="orange">2&nbsp;</font> Llenar el formulario</a>
             
                 
                 <a href="#carousel-example-1z" data-slide-to="2"  class="nav-link border border-light rounded" title="El borrador del perfil deberá ser elaborado por el estudiante con el apoyo académico del docente, en el área de la metodología de la investigación siendo asi revisado y corregido por el tutor, en el área del conocimiento del perfil, deberá cumplir todas las etapas del cronograma de elaboracion de perfil, de manera obligatoria">
-                <i class="fa fa-check-square"></i>Tener la aprobacion del tutor </a>
+                <font size=4 color="orange">3&nbsp;</font> Tener la aprobacion del tutor </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="3"  class="nav-link border border-light rounded" title="se debera realizar una carta para el director de carrera con las especificaciones necesarias">
-                <i class="fa fa-check-square"></i>Elaborar una carta para el director de carrera </a>
+                <font size=4 color="orange">4&nbsp;</font> Elaborar una carta para el director de carrera </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="4" class="nav-link border border-light rounded" title="hacer el envio de la carta propiamente con el formulario previamente realizado para la ceptacion ">
-                <i class="fa fa-check-square"></i>Enviar la carta y el formulario de direccion</a> 
+                <font size=4 color="orange">5&nbsp;</font> Enviar la carta y el formulario de direccion</a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="5"  class="nav-link border border-light rounded" title="es necesario la firma de aprobacion del proyecto de investigacion a realizar ">
-                <i class="fa fa-check-square"></i>Obtencion de firma de carrera </a> 
+                <font size=4 color="orange">6&nbsp;</font> Obtencion de firma de carrera </a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="6"  class="nav-link border border-light rounded" title="aprobado el proyecdo de investigacion se debe realizar el registro en el CS">
-                <i class="fa fa-check-square"></i>Registro en la pagina del CS</a> 
+                <font size=4 color="orange">7&nbsp;</font> Registro en la pagina del CS</a> 
 
-                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
-                <i class="fa fa-check-square"></i>Mas informacion</a> 
+                <a href="#carousel-example-1z" data-slide-to="7" class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">TRIBUNALES&nbsp;</font></a> 
                 </td>
             </tr>
         </table>           
@@ -400,29 +392,29 @@
            <tr>
               <td>
                 <a href="#carousel-example-1z" data-slide-to="0" class="nav-link border border-light rounded" title="uno de los primeros pasos es tomar la materia de perfil para el aprendizaje y elaboracion del proyecto con el docente deseado como requerimiento el estudiante debe tener aprobadas todas las materias que se encuentran en los semestres inferiores al nivel de la misma (aprobación hasta el octavo semestre de la actual malla curricular) o aprobación de por lo menos el 80% de las materias de la Carrera">
-                <i class="fa fa-check-square"></i>Estar inscrito en la materia de perfil </a>   
+                <font size=4 color="orange">1&nbsp;</font> Estar inscrito en la materia de perfil </a>   
                 
                 <a href="#carousel-example-1z" data-slide-to="1"  class="nav-link border border-light rounded" title="es preciso el llenar el formulario que sera como el borrador del perfil que debera ser revisado y corregido por el tutor, en el area del conocimiento del perfil.">
-                <i class="fa fa-check-square"></i>Llenar el formulario</a>
+                <font size=4 color="orange">2&nbsp;</font> Llenar el formulario</a>
             
                 
                 <a href="#carousel-example-1z" data-slide-to="2"  class="nav-link border border-light rounded" title="El borrador del perfil deberá ser elaborado por el estudiante con el apoyo académico del docente, en el área de la metodología de la investigación siendo asi revisado y corregido por el tutor, en el área del conocimiento del perfil, deberá cumplir todas las etapas del cronograma de elaboracion de perfil, de manera obligatoria">
-                <i class="fa fa-check-square"></i>Tener la aprobacion del tutor </a>
+                <font size=4 color="orange">3&nbsp;</font> Tener la aprobacion del tutor </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="3"  class="nav-link border border-light rounded" title="se debera realizar una carta para el director de carrera con las especificaciones necesarias">
-                <i class="fa fa-check-square"></i>Elaborar una carta para el director de carrera </a>
+                <font size=4 color="orange">4&nbsp;</font> Elaborar una carta para el director de carrera </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="4" class="nav-link border border-light rounded" title="hacer el envio de la carta propiamente con el formulario previamente realizado para la ceptacion ">
-                <i class="fa fa-check-square"></i>Enviar la carta y el formulario de direccion</a> 
+                <font size=4 color="orange">5&nbsp;</font> Enviar la carta y el formulario de direccion</a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="5"  class="nav-link border border-light rounded" title="es necesario la firma de aprobacion del proyecto de investigacion a realizar ">
-                <i class="fa fa-check-square"></i>Obtencion de firma de carrera </a> 
+                <font size=4 color="orange">6&nbsp;</font> Obtencion de firma de carrera </a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="6"  class="nav-link border border-light rounded" title="aprobado el proyecdo de investigacion se debe realizar el registro en el CS">
-                <i class="fa fa-check-square"></i>Registro en la pagina del CS</a> 
+                <font size=4 color="orange">7&nbsp;</font> Registro en la pagina del CS</a> 
 
-                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
-                <i class="fa fa-check-square"></i>Mas informacion</a> 
+                <a href="#carousel-example-1z" data-slide-to="7"  class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">TRIBUNALES&nbsp;</font></a> 
                 </td>
             </tr>
         </table>           
@@ -459,29 +451,29 @@
            <tr>
               <td>
                 <a href="#carousel-example-1z" data-slide-to="0" class="nav-link border border-light rounded" title="uno de los primeros pasos es tomar la materia de perfil para el aprendizaje y elaboracion del proyecto con el docente deseado como requerimiento el estudiante debe tener aprobadas todas las materias que se encuentran en los semestres inferiores al nivel de la misma (aprobación hasta el octavo semestre de la actual malla curricular) o aprobación de por lo menos el 80% de las materias de la Carrera">
-                <i class="fa fa-check-square"></i>Estar inscrito en la materia de perfil </a>   
+                <font size=4 color="orange">1&nbsp;</font> Estar inscrito en la materia de perfil </a>   
                 
                 <a href="#carousel-example-1z" data-slide-to="1"  class="nav-link border border-light rounded" title="es preciso el llenar el formulario que sera como el borrador del perfil que debera ser revisado y corregido por el tutor, en el area del conocimiento del perfil">
-                <i class="fa fa-check-square"></i>Llenar el formulario</a>
+                <font size=4 color="orange">2&nbsp;</font> Llenar el formulario</a>
             
                 
                 <a href="#carousel-example-1z" data-slide-to="2"  class="nav-link border border-light rounded" title="El borrador del perfil deberá ser elaborado por el estudiante con el apoyo académico del docente, en el área de la metodología de la investigación siendo asi revisado y corregido por el tutor, en el área del conocimiento del perfil, deberá cumplir todas las etapas del cronograma de elaboracion de perfil, de manera obligatoria">
-                <i class="fa fa-check-square"></i>Tener la aprobacion del tutor </a>
+                <font size=4 color="orange">3&nbsp;</font> Tener la aprobacion del tutor </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="3"  class="nav-link border border-light rounded" title="se debera realizar una carta para el director de carrera con las especificaciones necesarias">
-                <i class="fa fa-check-square"></i>Elaborar una carta para el director de carrera </a>
+                <font size=4 color="orange">4&nbsp;</font> Elaborar una carta para el director de carrera </a>
                 
                 <a href="#carousel-example-1z" data-slide-to="4" class="nav-link border border-light rounded" title="hacer el envio de la carta propiamente con el formulario previamente realizado para la ceptacion ">
-                <i class="fa fa-check-square"></i>Enviar la carta y el formulario de direccion</a> 
+                <font size=4 color="orange">5&nbsp;</font> Enviar la carta y el formulario de direccion</a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="5"  class="nav-link border border-light rounded" title="es necesario la firma de aprobacion del proyecto de investigacion a realizar ">
-                <i class="fa fa-check-square"></i>Obtencion de firma de carrera </a> 
+                <font size=4 color="orange">6&nbsp;</font> Obtencion de firma de carrera </a> 
                 
                 <a href="#carousel-example-1z" data-slide-to="6"  class="nav-link border border-light rounded" title="aprobado el proyecdo de investigacion se debe realizar el registro en el CS">
-                <i class="fa fa-check-square"></i>Registro en la pagina del CS</a> 
+                <font size=4 color="orange">7&nbsp;</font> Registro en la pagina del CS</a> 
 
-                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
-                <i class="fa fa-check-square"></i>Mas informacion</a> 
+                <a href="#carousel-example-1z" data-slide-to="7" class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">TRIBUNALES&nbsp;</font></a> 
                 </td>
             </tr>
         </table>           
@@ -507,6 +499,268 @@
                         <!-- Mask & flexbox options-->
                     </div>
                 </div>
+                
+                
+                <!--TRIBUNALES-->
+                
+                <div class="carousel-item">
+                    <div>
+                       
+         <table  cellspacing="20">
+            <tr>
+                <td rowspan="2" align="center"> <img src="img/tribunal7.png" align="lefth" usemap="#mapeo"> </td><td align="center" valign="bottom"><img src="img/logo3.png" align="top"></td>
+            </tr>
+           <tr>
+              <td>
+                <a href="#carousel-example-1z" data-slide-to="7"  class="nav-link border border-light rounded" title="Es necesaria la guia y la aprobacion del tutor de la materia de perfil para proceguir con el proceso de tribunal">
+                <font size=6 color="orange">1&nbsp;</font> Contar con la aprobacion del del tutor</a>   
+                
+                <a href="#carousel-example-1z" data-slide-to="8"  class="nav-link border border-light rounded" title="Una vez optenida la aprobacion del tutor se debe enviar cartas y documentos necesarios a recepcion">
+                <font size=6 color="orange">2&nbsp;</font> Recepcion de documentos necesarios</a>
+            
+                
+                <a href="#carousel-example-1z" data-slide-to="9"  class="nav-link border border-light rounded" title="El tribunal es asignado internamente  conforme a las areas del proyecto o perfil a ser defendido">
+                <font size=6 color="orange">3&nbsp;</font> Asignacion de tribunal </a>
+                
+                <a href="#carousel-example-1z" data-slide-to="10"  class="nav-link border border-light rounded" title="En esta ultima etapa se otorga una fecha para la defensa del proyecto">
+                <font size=6 color="orange">4&nbsp;</font> Asignacion de fecha de defensa</a>
+                
+               
+                
+                
+                <a href="#carousel-example-1z" data-slide-to="0"   class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">PERFIL&nbsp;</font></a> 
+             
+
+                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">MAS INFORMACION&nbsp;</font></a> 
+            
+                </td>
+            </tr>
+        </table>  
+                       
+                        <!-- Mask & flexbox options-->
+                        <div class="mask   indigo accent-4  d-flex justify-content-center align-items-center">
+                            <!-- Content -->
+                            <div class="text-center white-text mx-5 wow fadeIn">
+                                <h1 class="mb-4">
+                                <strong></strong>
+                                </h1>
+                                <p>
+                                    <strong></strong>
+                                </p>
+                                <p class="mb-4 d-none d-md-block">
+                                    <strong></strong>
+                                </p>
+                               
+                            </div>
+                            <!-- Content -->
+                        </div>
+                        <!-- Mask & flexbox options-->
+                    </div>
+                </div>
+                
+                
+                
+                
+        
+ <div class="carousel-item">
+                    <div>
+                       
+         <table  cellspacing="20">
+            <tr>
+                <td rowspan="2" align="center"> <img src="img/tribunal8.png" align="lefth" usemap="#mapeo"> </td><td align="center" valign="bottom"><img src="img/logo3.png" align="top"></td>
+            </tr>
+           <tr>
+              <td>
+                <a href="#carousel-example-1z" data-slide-to="7"  class="nav-link border border-light rounded" title="Es necesaria la guia y la aprobacion del tutor de la materia de perfil para proceguir con el proceso de tribunal">
+                <font size=6 color="orange">1&nbsp;</font> Contar con la aprobacion del del tutor</a>   
+                
+                <a href="#carousel-example-1z" data-slide-to="8"  class="nav-link border border-light rounded" title="Una vez optenida la aprobacion del tutor se debe enviar cartas y documentos necesarios a recepcion">
+                <font size=6 color="orange">2&nbsp;</font> Recepcion de documentos necesarios</a>
+            
+                
+                <a href="#carousel-example-1z" data-slide-to="9"  class="nav-link border border-light rounded" title="El tribunal es asignado internamente  conforme a las areas del proyecto o perfil a ser defendido">
+                <font size=6 color="orange">3&nbsp;</font> Asignacion de tribunal </a>
+                
+                <a href="#carousel-example-1z" data-slide-to="10"  class="nav-link border border-light rounded" title="En esta ultima etapa se otorga una fecha para la defensa del proyecto">
+                <font size=6 color="orange">4&nbsp;</font> Asignacion de fecha de defensa</a>
+                
+               
+                
+                
+                <a href="#carousel-example-1z" data-slide-to="0"   class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">PERFIL&nbsp;</font></a> 
+             
+
+                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">MAS INFORMACION&nbsp;</font></a> 
+            
+                </td>
+            </tr>
+        </table>  
+                       
+                        <!-- Mask & flexbox options-->
+                        <div class="mask   indigo accent-4  d-flex justify-content-center align-items-center">
+                            <!-- Content -->
+                            <div class="text-center white-text mx-5 wow fadeIn">
+                                <h1 class="mb-4">
+                                <strong></strong>
+                                </h1>
+                                <p>
+                                    <strong></strong>
+                                </p>
+                                <p class="mb-4 d-none d-md-block">
+                                    <strong></strong>
+                                </p>
+                               
+                            </div>
+                            <!-- Content -->
+                        </div>
+                        <!-- Mask & flexbox options-->
+                    </div>
+                </div>                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                             
+                
+    <div class="carousel-item">
+                    <div>
+                       
+         <table  cellspacing="20">
+            <tr>
+                <td rowspan="2" align="center"> <img src="img/tribunal9.png" align="lefth" usemap="#mapeo"> </td><td align="center" valign="bottom"><img src="img/logo3.png" align="top"></td>
+            </tr>
+           <tr>
+              <td>
+                <a href="#carousel-example-1z" data-slide-to="7"  class="nav-link border border-light rounded" title="Es necesaria la guia y la aprobacion del tutor de la materia de perfil para proceguir con el proceso de tribunal">
+                <font size=6 color="orange">1&nbsp;</font> Contar con la aprobacion del del tutor</a>   
+                
+                <a href="#carousel-example-1z" data-slide-to="8"  class="nav-link border border-light rounded" title="Una vez optenida la aprobacion del tutor se debe enviar cartas y documentos necesarios a recepcion">
+                <font size=6 color="orange">2&nbsp;</font> Recepcion de documentos necesarios</a>
+            
+                
+                <a href="#carousel-example-1z" data-slide-to="9"  class="nav-link border border-light rounded" title="El tribunal es asignado internamente  conforme a las areas del proyecto o perfil a ser defendido">
+                <font size=6 color="orange">3&nbsp;</font> Asignacion de tribunal </a>
+                
+                <a href="#carousel-example-1z" data-slide-to="10"  class="nav-link border border-light rounded" title="En esta ultima etapa se otorga una fecha para la defensa del proyecto">
+                <font size=6 color="orange">4&nbsp;</font> Asignacion de fecha de defensa</a>
+                
+               
+                
+                
+                <a href="#carousel-example-1z" data-slide-to="0"   class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">PERFIL&nbsp;</font></a> 
+             
+
+                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">MAS INFORMACION&nbsp;</font></a> 
+            
+                </td>
+            </tr>
+        </table>  
+                       
+                        <!-- Mask & flexbox options-->
+                        <div class="mask   indigo accent-4  d-flex justify-content-center align-items-center">
+                            <!-- Content -->
+                            <div class="text-center white-text mx-5 wow fadeIn">
+                                <h1 class="mb-4">
+                                <strong></strong>
+                                </h1>
+                                <p>
+                                    <strong></strong>
+                                </p>
+                                <p class="mb-4 d-none d-md-block">
+                                    <strong></strong>
+                                </p>
+                               
+                            </div>
+                            <!-- Content -->
+                        </div>
+                        <!-- Mask & flexbox options-->
+                    </div>
+                </div>            
+                
+                
+                
+                
+                
+                
+                
+    <div class="carousel-item">
+                    <div>
+                       
+         <table  cellspacing="20">
+            <tr>
+                <td rowspan="2" align="center"> <img src="img/tribunal10.png" align="lefth" usemap="#mapeo"> </td><td align="center" valign="bottom"><img src="img/logo3.png" align="top"></td>
+            </tr>
+           <tr>
+              <td>
+                <a href="#carousel-example-1z" data-slide-to="7"  class="nav-link border border-light rounded" title="Es necesaria la guia y la aprobacion del tutor de la materia de perfil para proceguir con el proceso de tribunal">
+                <font size=6 color="orange">1&nbsp;</font> Contar con la aprobacion del del tutor</a>   
+                
+                <a href="#carousel-example-1z" data-slide-to="8"  class="nav-link border border-light rounded" title="Una vez optenida la aprobacion del tutor se debe enviar cartas y documentos necesarios a recepcion">
+                <font size=6 color="orange">2&nbsp;</font> Recepcion de documentos necesarios</a>
+            
+                
+                <a href="#carousel-example-1z" data-slide-to="9"  class="nav-link border border-light rounded" title="El tribunal es asignado internamente  conforme a las areas del proyecto o perfil a ser defendido">
+                <font size=6 color="orange">3&nbsp;</font> Asignacion de tribunal </a>
+                
+                <a href="#carousel-example-1z" data-slide-to="10"  class="nav-link border border-light rounded" title="En esta ultima etapa se otorga una fecha para la defensa del proyecto">
+                <font size=6 color="orange">4&nbsp;</font> Asignacion de fecha de defensa</a>
+                
+               
+                
+                
+                <a href="#carousel-example-1z" data-slide-to="0"   class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">PERFIL&nbsp;</font></a> 
+             
+
+                <a href="http://www.cs.umss.edu.bo/archivos/reglamentoTitulacionCarrerasNuevoModif.pdf"  class="nav-link border border-light rounded" title="Css">
+                <font size=4 color="orange">MAS INFORMACION&nbsp;</font></a> 
+            
+                </td>
+            </tr>
+        </table>  
+                       
+                        <!-- Mask & flexbox options-->
+                        <div class="mask   indigo accent-4  d-flex justify-content-center align-items-center">
+                            <!-- Content -->
+                            <div class="text-center white-text mx-5 wow fadeIn">
+                                <h1 class="mb-4">
+                                <strong></strong>
+                                </h1>
+                                <p>
+                                    <strong></strong>
+                                </p>
+                                <p class="mb-4 d-none d-md-block">
+                                    <strong></strong>
+                                </p>
+                               
+                            </div>
+                            <!-- Content -->
+                        </div>
+                        <!-- Mask & flexbox options-->
+                    </div>
+                </div>            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
             </div>
            

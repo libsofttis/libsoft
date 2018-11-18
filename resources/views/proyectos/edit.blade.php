@@ -55,7 +55,7 @@
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
 									<label for="fechaRegistroProy">Fecha Registro <b class="h7 red-text">*</b></label>	
-										<input type="text" name="fechaRegistroProy" id="fechaRegistroProy" class="form-control input-sm"  value="{{$proyectos->fechaRegistroProy}}">
+										<input type="text" name="fechaRegistroProy" id="fechaRegistroProy" class="form-control datepicker"  value="{{$proyectos->fechaRegistroProy}}">
 									</div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">

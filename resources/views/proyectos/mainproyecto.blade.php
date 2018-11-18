@@ -19,9 +19,9 @@
             <!-- <button class="btn btn-indigo">
     		    <a href="/create"><font color="white" size="2">NUEVO PROYECTO</font></a>
             </button> -->
-			<button class="btn btn-cyan btn-rounded">
+			<!--<button class="btn btn-cyan btn-rounded">
                 <a href="/create"><font color="white" size="3">NUEVO PROYECTO</font></a>
-			</button>
+			</button>  -->
     	</div>
     </div>
 	<div class="tablaScroll4">

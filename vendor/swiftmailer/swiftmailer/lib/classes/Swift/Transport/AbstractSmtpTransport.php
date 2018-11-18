@@ -379,12 +379,12 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
         }
 
         if (!$valid) {
-            $this->_throwException(
-                new Swift_TransportException(
-                    'Expected response code '.implode('/', $wanted).' but got code '.
-                    '"'.$code.'", with message "'.$response.'"',
-                    $code)
-                );
+          //  $this->_throwException(
+           //     new Swift_TransportException(
+             //       'Expected response code '.implode('/', $wanted).' but got code '.
+               //     '"'.$code.'", with message "'.$response.'"',
+                 //   $code)
+                //);
         }
     }
 

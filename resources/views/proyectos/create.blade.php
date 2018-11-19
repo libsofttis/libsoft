@@ -5,6 +5,7 @@
 @section('content')
   
    <h1 align="center">NUEVO PROYECTO</h1>
+    <h3 align="center"><font size=4 color="red">(*)&nbsp;</font>Solo Trabajo Dirigido</h3>
 
     <form action="{{url('/proyectos')}}" method="POST" id="miForm">
        {{csrf_field()}}
@@ -114,7 +115,7 @@
            <!-- Material input   style="display:none;"  -->
          <div class="md-form form-group">
                <input type="text" class="form-control" id="institucion" name="institucion"><!--anadido-->
-               <label >Institucion dirigida:</label>
+               <label ><font size=4 color="red">*&nbsp;</font>Institucion dirigida:</label>
            </div>
        </div>
        

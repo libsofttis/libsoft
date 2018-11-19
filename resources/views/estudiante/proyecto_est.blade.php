@@ -4,11 +4,12 @@
 {{ csrf_field() }}
 
 <h1 class="text-center"><font color="#212121"> Asignacion de Proyectos </font></h1>
+<h3 align="center"><font size=4 color="red">(*)&nbsp;</font>Obligatorio</h3>
 <label></label>
 <div>
 	<div class="row">
 		<!--Blue select-->
-        <label class="col-md-1">Proyecto</label>
+        <label class="col-md-1"><font size=4 color="red">*&nbsp;</font>Proyecto</label>
         <select class="mdb-select colorful-select dropdown-primary col-md-11" id="idProyecto">
         	<option value=""></option>
             @foreach($res[0] as $proyectos)
@@ -18,7 +19,7 @@
         <!--/Blue select-->
 	</div>
 <div class="row">
-    <label class="col-md-6">Estudiante 1</label>
+    <label class="col-md-6"><font size=4 color="red">*&nbsp;</font>Estudiante 1</label>
     <label class="col-md-6">Estudiante 2</label>
         <!--Blue select-->
         <select class="mdb-select colorful-select dropdown-primary col-md-6" id="estudiante1">
@@ -38,7 +39,7 @@
         <!--/Blue select-->
 </div>
 <div class="row">
-        <label class="col-md-6">Tutor 1</label>
+        <label class="col-md-6"><font size=4 color="red">*&nbsp;</font>Tutor 1</label>
         <label class="col-md-6">Tutor 2</label>
         <!--Blue select-->
         <select class="mdb-select colorful-select dropdown-primary col-md-6" id="tutor1">

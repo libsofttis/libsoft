@@ -4,9 +4,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <h1 align="center">REPORTE PROYECTOS</h1>
 
-    <div class="form-row">
+<!--    <div class="form-row">
         <!-- buscar por fechas inicio-->
-        <div class='col-md-4'>
+  <!--      <div class='col-md-4'>
             <label>Fecha inicio:</label>
                 <input placeholder="seleccione una fecha" type="text" id="fechaIni" name="fechaIni" class="form-control datepicker">
         </div>
@@ -16,12 +16,12 @@
                 <input placeholder="seleccione una fecha" type="text" id="fechaFin" name="fechaFin" class="form-control datepicker">
         </div>
         <!-- fin -->
-        </div>
+    <!--    </div>
         <div class='col-md-4'>
             <button class="btn btn-cyan btn-rounded" id="buscar">
                 <a href="/reporteGeneralFecha"><font color="white" size="3">BUSCAR</font></a>
 			</button>
-        </div>
+        </div>-->
 		<div class="col-md-6 noPrint">
 	    		
                 <label class="sr-only" ></label>
